@@ -1,0 +1,23 @@
+<smart-dialog [opened]="opened" (overlayClick)="onOverlayClick()">
+
+
+  <div class="success" *ngIf="success">
+    {{successMessage}}
+  </div>
+  <smart-loading *ngIf="loading"></smart-loading>
+  <div class="wrapper" *ngIf="!success && !loading">
+    <div class="title">{{title}}</div>
+    <div class="alert alert-danger" *ngIf="error">
+      {{errorMessage}}
+    </div>
+    <div class="photo-container">
+      <smart-practitioner-photo-chooser [practitioner]="practitionerPhoto" [placeHolder]="thumbnailPlaceHolder">
+      </smart-practitioner-photo-chooser>
+    </div>
+    <div class="button-group">
+      <button class="btn" (click)="onOverlayClick()">{{cancelLabel}}</button>
+      <button class="btn btn-primary" (click)="save()">{{saveLabel}}</button>
+    </div>
+  </div>
+
+</smart-dialog>

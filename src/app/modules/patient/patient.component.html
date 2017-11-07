@@ -1,0 +1,51 @@
+<smart-search-header title="{{ 'PATIENTS.TITLE' | translate }}"
+                     (updateSuggestions)="debouncedSearch($event)"
+                     placeHolder="{{ 'PATIENTS.SEARCH' | translate }}"
+                     invalidLengthMessage="{{'SEARCH.INVALID_LENGTH' | translate}}">
+
+  <div class="field-group">
+    <div class="field">
+      <div class="field-label">
+        {{ 'PATIENTS.ORDER' | translate }}
+      </div>
+      <smart-select width="127px" [(value)]="selectedOrder" (change)="orderBy()">
+        <smart-option [value]="ORDER_NAME" [display]="'PATIENTS.ALPHABETICAL' | translate"></smart-option>
+        <smart-option [value]="ROOM" [display]="'PATIENTS.ROOM' | translate"></smart-option>
+      </smart-select>
+    </div>
+    <div class="field">
+      <div class="field-label">
+        {{ 'PATIENTS.SECTOR' | translate }}
+      </div>
+      <smart-select [(value)]="selectedSector"
+                    (change)="filterBySector()"
+                    *ngIf="sectors != null">
+        <smart-option [display]="'PATIENTS.ALL' | translate"></smart-option>
+        <smart-option [value]="sector['value']" [display]="sector['display']" *ngFor="let sector of sectors"></smart-option>
+      </smart-select>
+    </div>
+  </div>
+
+
+</smart-search-header>
+<div class="patients">
+  <div *ngIf="!loading">
+    <app-care-provider-card [patient]="patient" *ngFor="let patient of filteredPatients">
+    </app-care-provider-card>
+    <div class="last-flex-block" *ngFor="let i of [1,2,3,4,5]"></div>
+  </div>
+  <div>
+    <smart-loading *ngIf="loading || loadingMore"></smart-loading>
+  </div>
+  <div *ngIf="filteredPatients == null || filteredPatients.length === 0 && !loading && !error">
+    <h3>{{ 'PATIENTS.NORESULTS' | translate }}</h3>
+  </div>
+  <div *ngIf="error">
+      <h3>{{ 'BACKEND.TIMEOUT' | translate }}</h3>
+    </div>
+</div>
+<div class="loadMore">
+  <button class="btn" type="button" *ngIf="urlNext != null" (click)="getMorePatients()">
+    {{ 'PATIENTS.LOADMORE' | translate }}
+  </button>
+</div>

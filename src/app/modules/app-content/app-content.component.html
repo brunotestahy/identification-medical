@@ -1,0 +1,16 @@
+<smart-header>
+  <div col3>
+    <smart-practitioner-name
+        practitionerName="{{name}}"
+        title="{{ 'NAVIGATION.PROFESSIONAL' | translate }}"
+        [ngStyle]="{'margin-top': '-17px', 'display': 'block', float: 'left'}">
+    </smart-practitioner-name>
+    <smart-navigation [ngStyle]="{'margin-top': '-8px', 'display': 'block', float: 'left'}">
+      <smart-nav-item label="{{ 'NAVIGATION.HEALTHPRO' | translate }}" imgPath="/assets/profissionais.svg" route="/app/practitioner"></smart-nav-item>
+      <!-- <smart-nav-item label="{{ 'NAVIGATION.SHIFTS' | translate }}" imgPath="/assets/escalas.svg" route=""></smart-nav-item> -->
+      <smart-nav-item label="{{ 'NAVIGATION.PATIENTS' | translate }}" imgPath="/assets/visitas.svg" route="/app/patient"></smart-nav-item>
+    </smart-navigation>
+    <smart-logout label="{{ 'LOGOUT' | translate }}" [ngStyle]="{'margin-top': '-17px', 'display': 'inline-block'}"></smart-logout>
+  </div>
+</smart-header>
+<router-outlet></router-outlet>

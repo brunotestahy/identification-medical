@@ -1,0 +1,52 @@
+.room{
+  text-transform: uppercase;
+  background-color: #fff;
+  display: inline-block;
+  font-weight: bold;
+  padding: 3px 10px;
+  border-radius: 2px;
+  font-size: 14px;
+}
+
+.name, .error{
+  color: #534744;
+  font-weight: bold;
+  font-size: 17px;
+  margin-bottom: 3px;
+  font-family: 'skolasansblack';
+  padding: 12px 0 0 0;
+}
+
+.age{
+  color: #806d5b;
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  height: 19px;
+}
+
+/deep/ .care-provider-card app-practitioner-chooser{
+  margin-top: 20px;
+  display: inline-block;
+}
+
+/deep/ .care-provider-card .card{
+  height: 345px !important;
+}
+
+.loading-overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0,0,0,.05);
+  border-radius: 4px;
+  margin: -23px -39px;
+  padding: 50%;
+}
+
+/deep/ .care-provider-card smart-loading{
+  display: inline-block;
+  padding-top: 35px;
+}

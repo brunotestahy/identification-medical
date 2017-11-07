@@ -1,0 +1,135 @@
+.fieldTitle{
+  font-size: 13px;
+  color: #b17c6e;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.inputField{
+  border: 1px dashed #777;
+  border-radius: 7px;
+  padding: 2px;
+  width: 100%;
+  position: relative;
+}
+
+.inputField.fixed{
+  position: fixed;
+  left: 0;
+  z-index: 2;
+}
+
+.inputField input{
+  width: 100%;
+  height: 35px;
+  border-radius: 4px;
+  border: 0;
+  padding: 12px 50px 12px 12px;
+  color: #867c75;
+  font-size: 16px;
+}
+
+input:focus, button:focus{
+  outline: none;
+}
+
+.okBtn{
+  position: absolute;
+  top: 5.5px;
+  right: 6px;
+  background-color: #b67e6f;
+  border: 0 none;
+  border-radius: 3px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 4px 8px;
+}
+
+.okBtn[disabled]{
+  background-color: #999;
+}
+
+.suggestion-box{
+  background-color: #f4f3f1;
+  margin-top: -5px;
+  margin-bottom: -10px;
+  /*padding-top: 10px;*/
+  border-radius: 4px;
+  display: none;
+}
+
+.suggestion-box ul{
+  padding: 0;
+}
+
+.suggestion-box li{
+  list-style: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 13px;
+  cursor: pointer;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 204px;
+  text-align: left;
+  font-family: skolasansblack;
+}
+
+.suggestion-box li:hover, .suggestion-box li.highlight{
+  background-color: #e0dfdd;
+}
+
+.spaceDiv {
+  width: 100px;
+  height: 41px;
+}
+
+/deep/ .loading-wrapper smart-loading{
+  display: inline-block;
+  padding-top: 0;
+  position: absolute;
+  right: 6px;
+  top: 10px;
+}
+
+/deep/ .loading-wrapper smart-loading .loader .small-loading{
+  background-color: #b8b2ad;
+  width:10px;
+  height: 10px;
+}
+
+/deep/ .loading-wrapper smart-loading  .loading-container{
+  padding: 0;
+}
+
+.medic-display{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center
+}
+
+.medic-name{
+  padding: 10px 12px;
+  background-color: #b9b1ae;
+  border-radius: 6px;
+  color: white;
+  width: 175px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 15px;
+}
+
+.icon{
+  margin-top: 8px;
+  width: 19px;
+  height: 19px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.remove{
+  background-image: url('/assets/remove.png');
+}

@@ -1,0 +1,61 @@
+.patients{
+  margin: 35px 20px;
+  padding-bottom: 130px;
+}
+
+.patients div{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.last-flex-block{
+  width: 322px;
+}
+
+.icon{
+  margin-bottom: 10px;
+  width: 19px;
+  height: 19px;
+  cursor: pointer;
+}
+
+.edit{
+  background-image: url('/assets/edit.png');
+}
+
+.btn{
+  margin: 20px;
+  text-transform: uppercase;
+  padding: 18px;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: #fff;
+  border: 1px solid #da9d8c;
+  color: #da9d8c;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.loadMore {
+  text-align: center;
+}
+
+.field-group {
+  display: flex;
+  flex-flow: row nowrap;
+  padding-top: 29px;
+  padding-left: 20px;
+}
+
+.field {
+  padding: 6px;
+}
+
+.field-label {
+  font-weight: bold;
+  font-size: 13px;
+  color: #635953;
+}

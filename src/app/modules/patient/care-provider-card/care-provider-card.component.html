@@ -1,0 +1,35 @@
+<smart-card class="care-provider-card">
+  <div content (click)="updateCardZindex(content)" #content>
+    <div *ngIf="!error">
+      <div class="room">
+         {{ 'CAREPROVIDER.ROOM' | translate }} {{patient.room}}
+      </div>
+      <div class="name">
+        {{patient.fullName}}
+      </div>
+      <div class="age">
+        <span *ngIf="patient.birthDate != null && patient.birthDate.dateTime != null">
+          {{getBirthdate() | date:'dd/MM/yyyy'}} - {{getAge()}} {{ 'CAREPROVIDER.YEARS' | translate }}
+        </span>
+      </div>
+      <app-practitioner-chooser fieldTitle="{{ 'CAREPROVIDER.ASSISTANT' | translate }}"
+                                [practitioner]="getAssistantMedic()"
+                                (setPractitioner)="setAssistant($event)"
+                                (remove)="onRemoveAssitant($event)">
+      </app-practitioner-chooser>
+      <app-practitioner-chooser fieldTitle="{{ 'CAREPROVIDER.ASSOCIATED' | translate }}"
+                                [practitioner]="getAssociatedMedic()"
+                                (setPractitioner)="setAssociated($event)"
+                                (remove)="onRemoveAssociated($event)">
+      </app-practitioner-chooser>
+      <div class="loading-overlay" *ngIf="loading">
+        <smart-loading></smart-loading>
+      </div>
+    </div>
+    <div *ngIf="error">
+      <div class="error">
+          {{ 'CAREPROVIDER.CARD_ERROR' | translate }}
+      </div>
+    </div>
+  </div>
+</smart-card>

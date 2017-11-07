@@ -1,0 +1,47 @@
+{
+  "BACKEND": {
+    "TIMEOUT": "Ocorreu um erro. Por favor tente novamente mais tarde"
+  },
+  "SEARCH" : {
+    "INVALID_LENGTH": "Digite pelo menos 3 letras para buscar"
+  },
+  "LOGIN": {
+    "TITLE": "Smart Hospitality",
+    "USER_PLACEHOLDER": "Usuário",
+    "PASSWORD_PLACEHOLDER": "Senha",
+    "LOGIN_BUTTON": "Entrar",
+    "AUTH_ERROR_MESSAGE": "Usuário e senha inválidos",
+    "TOKEN_ERROR_MESSAGE": "Ocorreu um erro. Por favor, tente novamente"
+  },
+  "LOGOUT": "sair",
+  "PRACTITIONERS": {
+    "LOADMORE": "CARREGAR MAIS PROFISSIONAIS +",
+    "NORESULTS": "Nenhum resultado encontrado",
+    "SEARCH": "Buscar nome do profissional",
+    "TITLE": "Profissionais de Saúde"
+  },
+  "PATIENTS": {
+    "LOADMORE": "CARREGAR MAIS PACIENTES +",
+    "NORESULTS": "Nenhum resultado encontrado",
+    "SEARCH": "Buscar nome do paciente ou número do quarto",
+    "TITLE": "Pacientes",
+    "ALPHABETICAL": "Alfabética",
+    "ROOM": "Quarto",
+    "SECTOR": "Setor",
+    "ORDER": "Ordenar",
+    "ALL": "Todos"
+  },
+  "NAVIGATION": {
+    "HEALTHPRO": "PROF. SAÚDE",
+    "SHIFTS": "ESCALAS",
+    "PATIENTS": "PACIENTES",
+    "PROFESSIONAL": "PROFISSIONAL DE SAÚDE"
+  },
+  "CAREPROVIDER": {
+    "ROOM": "Quarto",
+    "YEARS": "anos",
+    "ASSISTANT": "Médico Assistente",
+    "ASSOCIATED": "Médico Associado",
+    "CARD_ERROR": "Ocorreu um erro. Por favor tente novamente mais tarde."
+  }
+}

@@ -1,0 +1,40 @@
+<smart-search-header title="{{ 'PRACTITIONERS.TITLE' | translate }}"
+                     (updateSuggestions)="debouncedSearch($event)"
+                     placeHolder="{{ 'PRACTITIONERS.SEARCH' | translate }}"
+                     invalidLengthMessage="{{'SEARCH.INVALID_LENGTH' | translate}}">
+</smart-search-header>
+<div class="practitioners">
+  <div *ngIf="!loading">
+    <smart-practitioner-card [practitioner]="prac" *ngFor="let prac of practitioners">
+      <div actions>
+          <div class="edit icon" (click)="openPractitionerPhotoDialog(prac)"></div>
+      </div>
+    </smart-practitioner-card>
+    <div class="last-flex-block" *ngFor="let i of [1,2,3,4,5]"></div>
+  </div>
+  <div>
+    <smart-loading *ngIf="loading || loadingMore"></smart-loading>
+  </div>
+  <div *ngIf="practitioners == null || practitioners.length === 0 && !loading && !error">
+    <h3>{{ 'PRACTITIONERS.NORESULTS' | translate }}</h3>
+  </div>
+  <div *ngIf="error">
+    <h3>{{ 'BACKEND.TIMEOUT' | translate }}</h3>
+  </div>
+</div>
+<div class="loadMore">
+  <button class="btn" type="button" *ngIf="urlNext != null" (click)="getMorePractitioners()">
+    {{ 'PRACTITIONERS.LOADMORE' | translate }}
+  </button>
+</div>
+<app-practitioner-photo-dialog [opened]="photoDialogOpened"
+                               [practitioner]="selectedPractitioner"
+                               (overlayClick)="onOverlayClick()"
+                               (practitionerSaved)="onPractitionerSaved($event)"
+                               title="Editar imagem do Profissional"
+                               errorMessage="Erro ao salvar profissional"
+                               successMessage="Profissional salvo com sucesso"
+                               thumbnailPlaceHolder="Incluir imagem"
+                               cancelLabel="cancelar"
+                               saveLabel="Cadastrar">
+</app-practitioner-photo-dialog>

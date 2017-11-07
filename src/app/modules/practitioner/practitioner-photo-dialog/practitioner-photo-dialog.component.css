@@ -1,0 +1,46 @@
+/deep/ .content{
+  max-height: 746px;
+  overflow: auto;
+}
+
+.title{
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.button-group{
+  text-align: center;
+}
+
+.button-group .btn{
+  margin-right: 12px;
+  text-transform: uppercase;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: #fff;
+  border: 1px solid #da9d8c;
+  color: #da9d8c;
+}
+
+.button-group .btn.btn-primary{
+  padding: 12px 33px;
+  background-color: #da9d8c;
+  color: #fff;
+}
+
+.photo-container{
+  text-align: center;
+  padding: 60px;
+}
+
+.success{
+  background-repeat: no-repeat;
+  background-size: 200px;
+  padding: 20px 30px 20px 80px;
+  font-size: 20px;
+  font-weight: bold;
+  background-position-x: -70px;
+  background-position-y: center;
+  background-image: url('/assets/check.gif');
+}

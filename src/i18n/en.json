@@ -1,0 +1,47 @@
+{
+  "BACKEND": {
+    "TIMEOUT": "An error has occurred. Please try again later"
+  },
+  "SEARCH" : {
+    "INVALID_LENGTH": "Type at least 3 letters to search"
+  },
+  "LOGIN": {
+    "TITLE": "Smart Hospitality",
+    "USER_PLACEHOLDER": "USer",
+    "PASSWORD_PLACEHOLDER": "Password",
+    "LOGIN_BUTTON": "Login",
+    "AUTH_ERROR_MESSAGE": "Invalid user and password",
+    "TOKEN_ERROR_MESSAGE": "An error has occurred. Please, try again"
+  },
+  "LOGOUT": "logout",
+  "PRACTITIONERS": {
+    "LOADMORE": "LOAD MORE PROFESSIONALS +",
+    "NORESULTS": "No results found",
+    "SEARCH": "Search professional by name",
+    "TITLE": "Health Professionals"
+  },
+  "PATIENTS": {
+    "LOADMORE": "LOAD MORE PATIENTS +",
+    "NORESULTS": "No results found",
+    "SEARCH": "Search professional by name or room number",
+    "TITLE": "Patients",
+    "ALPHABETICAL": "Alphabetical",
+    "ROOM": "Room",
+    "SECTOR": "Sector",
+    "ORDER": "Order by",
+    "ALL": "All"
+  },
+  "NAVIGATION": {
+    "HEALTHPRO": "HEALTH PROF.",
+    "SHIFTS": "SHIFTS",
+    "PATIENTS": "PATIENTS",
+    "PROFESSIONAL": "HEALTH PROFESSIONAL"
+  },
+  "CAREPROVIDER": {
+    "ROOM": "Room",
+    "YEARS": "years old",
+    "ASSISTANT": "Assistant Doctor",
+    "ASSOCIATED": "Associated Doctor",
+    "CARD_ERROR": "An error has occurred. Please try again later."
+  }
+}

@@ -1,0 +1,35 @@
+<div class="fieldTitle">
+  {{fieldTitle}}
+</div>
+<div class="selectedMedic" *ngIf="practitioner != null">
+  <div class="fieldName"></div>
+  <div class="editBtn"></div>
+</div>
+<div class="inputField" *ngIf="practitioner == null" [ngClass]="{'fixed': listening}">
+  <input type="text" (focus)="inputFocus()"
+                     (input)="futureKeyPress(inputText.value)"
+                     #inputText/>
+  <div class="suggestion-box" #suggestionBox>
+    <ul #suggestionList>
+      <li *ngFor="let item of suggestions; let i = index"
+          (click)="selectLi(i)"
+          [title]="item.fullName">
+        {{item.fullName}}
+      </li>
+    </ul>
+  </div>
+  <button class="okBtn"
+          (click)="onSetPractitioner()"
+          [disabled]="selectedPractitioner == null"
+          *ngIf="!loading || !listening">OK</button>
+  <div class="loading-wrapper">
+    <smart-loading *ngIf="loading && listening" loader="ball-beat" loaderClass="small-loading"></smart-loading>
+  </div>
+</div>
+<div class="spaceDiv" *ngIf="practitioner == null" [ngStyle]="{'display': listening ? '' : 'none'}"></div>
+<div class="medic-display" *ngIf="practitioner != null">
+  <div class="medic-name" title="{{practitioner.fullName}}">
+    {{practitioner.fullName}}
+  </div>
+  <div class="icon remove" (click)="onRemove()"></div>
+</div>
