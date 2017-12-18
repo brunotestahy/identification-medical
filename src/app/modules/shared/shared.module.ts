@@ -1,3 +1,4 @@
+import { UserSessionService } from './user-session.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -21,7 +22,8 @@ import { environment } from '../../../environments/environment';
       provide: Http,
       useFactory: FrontEndHttpFactory,
       deps: [XHRBackend, RequestOptions, FrontEndConfigProvider, Router]
-    }
+    },
+    UserSessionService
   ]
 })
 export class SharedModule { }

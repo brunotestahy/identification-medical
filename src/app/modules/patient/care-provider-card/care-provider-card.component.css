@@ -8,30 +8,80 @@
   font-size: 14px;
 }
 
-.name, .error{
+.name{
   color: #534744;
   font-weight: bold;
   font-size: 17px;
   margin-bottom: 3px;
   font-family: 'skolasansblack';
-  padding: 12px 0 0 0;
+  margin: 7px 0 0 0;
+  height: 76px;
+  width: 210px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  padding-top: 20px;
+
+}
+
+.name .name-content{
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.error{
+  color: #534744;
+  font-weight: bold;
+  font-size: 17px;
+  margin-bottom: 3px;
+  font-family: 'skolasansblack';
+  padding: 14px 0 0 0;
 }
 
 .age{
   color: #806d5b;
   font-size: 15px;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 9px;
   height: 19px;
 }
 
 /deep/ .care-provider-card app-practitioner-chooser{
-  margin-top: 20px;
+  margin-top: 10px;
   display: inline-block;
+  position: relative;
+  width: 250px;
 }
 
 /deep/ .care-provider-card .card{
   height: 345px !important;
+  width: 920px !important;
+}
+
+/deep/ .inputField {
+  width: 250px !important;
+}
+
+.card-wrapper{
+  width: 915px !important;
+}
+
+.card-checker{
+  flex-flow: row;
+  display: flex;
+}
+
+.col{
+  width: 290px;
+}
+
+.col-icons{
+  border-left: 1px dashed;
+  width: 80px;
 }
 
 .loading-overlay{
@@ -41,12 +91,72 @@
   bottom: 0;
   right: 0;
   background-color: rgba(0,0,0,.05);
-  border-radius: 4px;
-  margin: -23px -39px;
-  padding: 50%;
+  border-radius: 9px;
+  margin: -23px -3px;
 }
 
 /deep/ .care-provider-card smart-loading{
   display: inline-block;
-  padding-top: 35px;
+  padding-top: 140px;
+}
+
+.provider-role{
+  text-transform: uppercase;
+  color: #b17c6e;
+  font-weight: bold;
+  font-size: 15px;
+  padding-top: 25px;
+}
+
+.vertical-display {
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: column;
+  align-items: center;
+}
+
+.icons-day {
+  position: absolute;
+  left: 306px;
+}
+
+.day {
+  top: 95px;
+}
+
+.afternoon {
+  top: 172px;
+}
+
+.night {
+  top: 248px;
+}
+
+.copy-schedule {
+  position: absolute;
+  right: 15px;
+  top: -20px;
+  color: #7d746d;
+  font-size: 15px;
+  font-family: 'skolasansblack';
+}
+
+.btn-copy-schedule {
+  background: #fff;
+  border: 1px solid #b17c6e;
+  color: #b17c6e;
+}
+
+/deep/ .mat-form-field {
+  width: 105px;
+}
+
+.calendar{
+  cursor: pointer;
+  background-image: url(/assets/calendar.png);
+  width: 15px;
+  height: 16px;
+  position: absolute;
+  right: 0;
+  top: 7px;
 }

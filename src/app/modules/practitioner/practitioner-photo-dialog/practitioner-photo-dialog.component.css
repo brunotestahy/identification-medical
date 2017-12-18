@@ -29,6 +29,10 @@
   color: #fff;
 }
 
+.button-group .btn.btn-primary[disabled]{
+  background-color: #999;
+}
+
 .photo-container{
   text-align: center;
   padding: 60px;
@@ -43,4 +47,10 @@
   background-position-x: -70px;
   background-position-y: center;
   background-image: url('/assets/check.gif');
+}
+
+.medic-name{
+  text-align: center;
+  padding: 10px 0 0 0;
+  font-family: skolasansblack;
 }

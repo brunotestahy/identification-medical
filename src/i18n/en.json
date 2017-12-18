@@ -1,13 +1,15 @@
 {
+  "APP_TITLE": "Identificação da Equipe de Cuidados",
   "BACKEND": {
-    "TIMEOUT": "An error has occurred. Please try again later"
+    "TIMEOUT": "An error has occurred. Please try again later",
+    "ERROR": "An error has occurred. Please try again later"
   },
   "SEARCH" : {
     "INVALID_LENGTH": "Type at least 3 letters to search"
   },
   "LOGIN": {
     "TITLE": "Smart Hospitality",
-    "USER_PLACEHOLDER": "USer",
+    "USER_PLACEHOLDER": "User",
     "PASSWORD_PLACEHOLDER": "Password",
     "LOGIN_BUTTON": "Login",
     "AUTH_ERROR_MESSAGE": "Invalid user and password",
@@ -18,12 +20,24 @@
     "LOADMORE": "LOAD MORE PROFESSIONALS +",
     "NORESULTS": "No results found",
     "SEARCH": "Search professional by name",
-    "TITLE": "Health Professionals"
+    "TITLE": "Health Professionals",
+    "EDIT_PHOTO": "Edit photo",
+    "DELETE_PHOTO": "Delete photo",
+    "DELETE_CONFIRMATION": "Are you sure you want to delete the photo ",
+    "DELETE_ERROR": "An error has occurred. Please, try again",
+    "ROLE": {
+      "LABEL": "Professional",
+      "ALL": "All",
+      "1": "Medic",
+      "2": "Nurse",
+      "6": "Nursing Technician"
+    },
+    "EVALUATION": "Evaluation"
   },
   "PATIENTS": {
     "LOADMORE": "LOAD MORE PATIENTS +",
     "NORESULTS": "No results found",
-    "SEARCH": "Search professional by name or room number",
+    "SEARCH": "Search patient by name or room number",
     "TITLE": "Patients",
     "ALPHABETICAL": "Alphabetical",
     "ROOM": "Room",
@@ -35,13 +49,83 @@
     "HEALTHPRO": "HEALTH PROF.",
     "SHIFTS": "SHIFTS",
     "PATIENTS": "PATIENTS",
-    "PROFESSIONAL": "HEALTH PROFESSIONAL"
+    "PROFESSIONAL": "HEALTH PROFESSIONAL",
+    "DASHBOARD": "Dashboard"
   },
   "CAREPROVIDER": {
     "ROOM": "Room",
     "YEARS": "years old",
     "ASSISTANT": "Assistant Doctor",
     "ASSOCIATED": "Associated Doctor",
-    "CARD_ERROR": "An error has occurred. Please try again later."
+    "CARD_ERROR": "An error has occurred. Please try again later.",
+    "NURSE": "Nurse",
+    "NURSE_TECH": "Nurse Tech.",
+    "COPYSCHEDULE": "Copy work shifts from ",
+    "COPYSCHEDULEBUTTON": "Copy"
+  },
+  "PHOTO_DIALOG": {
+    "TITLE": "Edit Practitioner Image",
+    "SUCCESS_MESSAGE": "Practitioner saved successfully",
+    "THUMBNAIL_PLACEHOLDER": "Insert image",
+    "CANCEL_LABEL": "cancel",
+    "SAVE_LABEL": "save"
+  },
+  "MENU": {
+    "SMART": "Smart Hospitality",
+    "IDENTIFICATION": "Care Team",
+    "CARE_PLAN": "Care Plan",
+    "SCHEDULE": "Schedule",
+    "EVALUATION": "Evaluation"
+  },
+  "EVALUATION" : {
+    "HEADER_GREETING" : "Your evaluation is important for our improvement",
+    "SEARCH" : "Search by name",
+    "FILTER" : {
+      "LABEL" : "Filter by evaluation type",
+      "EVERYONE": "All",
+      "EVALUATED": "Rated",
+      "NOT_EVALUATED": "Not rated"
+    },
+    "BUTTON": {
+      "EVALUATE": "Evaluate",
+      "REEVALUATE": "Re-evaluate"
+    },
+    "FORM" : {
+      "ASTERISK": {
+        "TOP": "Your evaluation will be kept in full secrecy. No professional will know how it was evaluated",
+        "ASTERISK_BOTTOM": "The information provided will be forwarded directly to the ombudsman."
+      },
+      "SUBMIT_BUTTON": "SUBMIT EVALUATION",
+      "GREETING": "Hi",
+      "HEADER": "we would like to know how was your experience with our practitioner",
+      "HEADER_REEVALUATE": "would you like to re-evaluate this practitioner? Your past evaluation will be discarded",
+      "WANNA_COMMENT": "Want to make a comment?",
+      "EVALUATION_EXCUSE": "Why did you evaluate your experience like that?",
+      "CHECKBOX": {
+        "TIME": "Atendance delay",
+        "CLARITY": "Information clarity",
+        "CORDIALITY": "Atendance cordiality",
+        "OTHER": "Other"
+      },
+      "TEXTAREA": "Comment about this professional"
+    }
+  },
+  "DASHBOARD" : {
+    "FILTER" : {
+      "PERIOD": "Period",
+      "LAST_30_DAYS": "Last 30 days",
+      "TODAY": "Today",
+      "SHIFT": "Shift",
+      "GRADE": "Grade",
+      "SEARCH_NAME": "Search by name",
+      "RANGE_PREFIX": "to",
+      "UNTIL_PREFIX": "up to",
+      "QUANTITY": "Evaluation qnt."
+    },
+    "TABLE" : {
+      "NAME": "Nurse Name",
+      "DEPOSITIONS" : "Depositions",
+      "AVERAGE" : "Geral Average"
+    }
   }
 }

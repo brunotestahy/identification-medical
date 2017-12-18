@@ -1,0 +1,64 @@
+<smart-dialog [opened]="opened" (overlayClick)="onOverlayClick()" >
+  <div class="header" *ngIf="pastRating">
+      {{ 'EVALUATION.FORM.GREETING' | translate }} {{firstName}}, {{ 'EVALUATION.FORM.HEADER_REEVALUATE' | translate }}
+  </div>
+  <div class="header" *ngIf="!pastRating">
+      {{ 'EVALUATION.FORM.GREETING' | translate }} {{firstName}}, {{ 'EVALUATION.FORM.HEADER' | translate }}
+  </div>
+
+  <div class="fake-card">
+    <div>
+      <smart-practitioner-thumbnail [practitioner]="practitioner"></smart-practitioner-thumbnail>
+    </div>
+    <div class="fake-card-right">
+      <p class="role">{{role}}</p>
+      <p>{{practitioner?.name}}</p>
+      <p class="crm">{{getRegionalCouncil(practitioner)}} {{practitioner?.crm}} {{practitioner?.crmUF}}</p>
+    </div>
+  </div>
+
+  <form [formGroup]="ratingForm" (ngSubmit)="onSubmit(ratingForm)">
+
+    <div style="outline: none;">
+
+      <ngb-rating formControlName="rating" [(rate)]="currentRate">
+        <ng-template let-fill="fill">
+          <span class="star" [class.filled]="fill === 100">&#9733;</span>
+        </ng-template>
+      </ngb-rating>
+    </div>
+
+    <div *ngIf = "currentRate > 3 && !goodCommentTextAreaOpen">
+      <p class="indagation clickable" (click)="goodComment()"> {{ 'EVALUATION.FORM.WANNA_COMMENT' | translate }} </p>
+    </div>
+    <div *ngIf = "currentRate > 3 && goodCommentTextAreaOpen">
+      <textarea class="text-area"
+        rows="3"
+        class="u-margin-top-default"
+        (change)="doTextareaValueChange($event)"
+        placeholder="{{ 'EVALUATION.FORM.TEXTAREA' | translate }}"
+        formControlName="comment">{{messageTextArea}}</textarea>
+    </div>
+
+    <div *ngIf="currentRate < 4">
+      <p class="indagation"> {{ 'EVALUATION.FORM.EVALUATION_EXCUSE' | translate }} </p>
+      <div class="containers">
+        <label class="container" *ngFor="let reason of reasons">{{ reason.display }}
+          <input type="checkbox" (change)="onChangeCombo(reason.display, $event.target.checked)">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <textarea class="text-area"
+                rows="3"
+                class="u-margin-top-default"
+                (change)="doTextareaValueChange($event)"
+                placeholder="{{ 'EVALUATION.FORM.TEXTAREA' | translate }}">{{messageTextArea}}</textarea>
+    </div>
+    <input class="submit-button {{ratingForm.valid}}" type="submit" value="{{ 'EVALUATION.FORM.SUBMIT_BUTTON' | translate }}" [disabled]="ratingForm.invalid">
+  </form>
+
+  <div class="asterisk-container">
+    <p class="asterisk">{{ 'EVALUATION.FORM.ASTERISK.TOP' | translate }}</p>
+    <p class="asterisk">{{ 'EVALUATION.FORM.ASTERISK.BOTTOM' | translate }}</p>
+  </div>
+</smart-dialog>

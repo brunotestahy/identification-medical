@@ -1,3 +1,4 @@
+<smart-rules-calendar dateFocus="{{selectedDate}}" (rulesCalendarDate)="onDateChange($event)"></smart-rules-calendar>
 <smart-search-header title="{{ 'PATIENTS.TITLE' | translate }}"
                      (updateSuggestions)="debouncedSearch($event)"
                      placeHolder="{{ 'PATIENTS.SEARCH' | translate }}"
@@ -30,9 +31,13 @@
 </smart-search-header>
 <div class="patients">
   <div *ngIf="!loading">
-    <app-care-provider-card [patient]="patient" *ngFor="let patient of filteredPatients">
+    <app-care-provider-card *ngFor="let patient of filteredPatients"
+                            [patient]="patient"
+                            [editable]="isEditable()"
+                            [appointments]="getAppointments(patient)"
+                            [selectedDate]="selectedDate"
+                            [cardIsLoading]="loadingAppointment">
     </app-care-provider-card>
-    <div class="last-flex-block" *ngFor="let i of [1,2,3,4,5]"></div>
   </div>
   <div>
     <smart-loading *ngIf="loading || loadingMore"></smart-loading>
@@ -41,8 +46,8 @@
     <h3>{{ 'PATIENTS.NORESULTS' | translate }}</h3>
   </div>
   <div *ngIf="error">
-      <h3>{{ 'BACKEND.TIMEOUT' | translate }}</h3>
-    </div>
+    <h3>{{ 'BACKEND.TIMEOUT' | translate }}</h3>
+  </div>
 </div>
 <div class="loadMore">
   <button class="btn" type="button" *ngIf="urlNext != null" (click)="getMorePatients()">

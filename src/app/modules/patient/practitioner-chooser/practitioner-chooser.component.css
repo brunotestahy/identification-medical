@@ -14,7 +14,7 @@
 }
 
 .inputField.fixed{
-  position: fixed;
+  position: absolute;
   left: 0;
   z-index: 2;
 }
@@ -72,7 +72,7 @@ input:focus, button:focus{
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  width: 204px;
+  width: 250px;
   text-align: left;
   font-family: skolasansblack;
 }
@@ -105,8 +105,14 @@ input:focus, button:focus{
 }
 
 .medic-display{
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
   display: flex;
+  -webkit-flex-flow: row nowrap;
   flex-flow: row nowrap;
+  -webkit-justify-content: center; /* Safari 6.1+ */
   justify-content: center
 }
 
@@ -115,7 +121,7 @@ input:focus, button:focus{
   background-color: #b9b1ae;
   border-radius: 6px;
   color: white;
-  width: 175px;
+  width: 216px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;

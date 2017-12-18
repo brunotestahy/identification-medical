@@ -1,0 +1,125 @@
+<div class="bar-divider"></div>
+<div class="filter">
+  <div class="days">
+    <span>{{'DASHBOARD.FILTER.PERIOD' | translate}}</span>
+    <label class="container">{{'DASHBOARD.FILTER.LAST_30_DAYS' | translate}}
+      <input type="radio" checked="checked" name="radio">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">{{'DASHBOARD.FILTER.TODAY' | translate}}
+      <input type="radio" name="radio">
+      <span class="checkmark"></span>
+    </label>
+
+    <label class="container" style="width:0px">
+        <input type="radio" name="radio">
+        <span class="checkmark"></span>
+    </label>
+    <mat-form-field>
+      <input matInput [matDatepicker]="myDatepickerStart">
+      <mat-datepicker-toggle matSuffix [for]="myDatepickerStart"></mat-datepicker-toggle>
+      <mat-datepicker #myDatepickerStart></mat-datepicker>
+    </mat-form-field>
+    <span class="range-prefix"> {{'DASHBOARD.FILTER.RANGE_PREFIX' | translate}} </span>
+    <mat-form-field>
+        <input matInput [matDatepicker]="myDatepickerEnd">
+        <mat-datepicker-toggle matSuffix [for]="myDatepickerEnd"></mat-datepicker-toggle>
+        <mat-datepicker #myDatepickerEnd></mat-datepicker>
+      </mat-form-field>
+  </div>
+  <div class="field-group">
+      <div class="field">
+        <div class="field-label">
+          {{'DASHBOARD.FILTER.QUANTITY' | translate}}
+        </div>
+        <smart-select width="127px" [(value)]="selectedOrder">
+          <smart-option [display]="'PATIENTS.ALPHABETICAL' | translate"></smart-option>
+          <smart-option [display]="'PATIENTS.ROOM' | translate"></smart-option>
+        </smart-select>
+      </div>
+      <div class="field">
+        <div class="field-label">
+          {{'DASHBOARD.FILTER.SHIFT' | translate}}
+        </div>
+        <smart-select [(value)]="selectedOrder">
+          <smart-option [display]="'PATIENTS.ALL' | translate"></smart-option>
+          <smart-option [display]="sector['display']" *ngFor="let sector of sectors"></smart-option>
+        </smart-select>
+      </div>
+      <div class="field">
+          <div class="field-label">
+            {{'DASHBOARD.FILTER.GRADE' | translate}}
+          </div>
+          <smart-select [(value)]="selectedOrder">
+            <smart-option [display]="'PATIENTS.ALL' | translate"></smart-option>
+            <smart-option [display]="sector['display']" *ngFor="let sector of sectors"></smart-option>
+          </smart-select>
+          <span class="select-grade">{{'DASHBOARD.FILTER.RANGE_PREFIX' | translate}}</span>
+          <smart-select [(value)]="selectedOrder" class="select-grade-two">
+            <smart-option [display]="'PATIENTS.ALL' | translate"></smart-option>
+            <smart-option [display]="sector['display']" *ngFor="let sector of sectors"></smart-option>
+          </smart-select>
+        </div>
+    </div>
+</div>
+<smart-search-header  (updateSuggestions)="debouncedSearch($event)"
+                      placeHolder="{{ 'DASHBOARD.FILTER.SEARCH_NAME' | translate }}"
+                      invalidLengthMessage="{{'SEARCH.INVALID_LENGTH' | translate}}"
+                      width="95%"
+                      margin="0 20px 0 20px">
+</smart-search-header>
+
+<div class="main">
+  <table *ngIf="!loading">
+    <tr>
+        <th>{{'DASHBOARD.TABLE.NAME' | translate}}</th>
+        <th></th>
+        <th>{{'DASHBOARD.TABLE.AVERAGE' | translate}}</th>
+        <th></th>
+        <th>{{'DASHBOARD.TABLE.DEPOSITIONS' | translate}}</th>
+    </tr>
+    <tr *ngFor="let prac of practitioners">
+      <td colspan="2" class="name">
+        <div class="inner-name">
+          <smart-practitioner-thumbnail [practitioner]="prac"></smart-practitioner-thumbnail> <span>{{prac.name}}</span>
+        </div>
+      </td>
+      <td>
+      <ng-template #t let-fill="fill">
+        <span *ngIf="fill === 100" class="star filled">&#9733;</span>
+        <span *ngIf="fill === 0" class="star">&#9733;</span>
+        <span *ngIf="fill < 100 && fill > 0" class="star">
+          <span class="half" [style.width.%]="fill">&#9733;</span>&#9733;
+        </span>
+      </ng-template>
+      <ngb-rating [(rate)]="currentRate" [starTemplate]="t" [readonly]="true" max="5"></ngb-rating>
+      </td>
+      <td></td>
+      <td class="depositions">
+        <img class="img-left" src="assets/quotation.svg" >
+          <span>{{depositions}}</span>
+          <span class="rating-depositions">
+            28/04/2014, 10:24h
+            <ngb-rating [(rate)]="currentRateDepositions" [readonly]="true">
+              <ng-template let-fill="fill">
+                <span class="star-depositions" [class.filled]="fill === 100">&#9733;</span>
+              </ng-template>
+            </ngb-rating>
+          </span>
+        <img class="img-right" src="assets/quotation.svg" >
+      </td>
+    </tr>
+  </table>
+
+
+  <div>
+    <smart-loading *ngIf="loading || loadingMore"></smart-loading>
+  </div>
+  <div *ngIf="practitioners == null || practitioners.length === 0 && !loading && !error">
+    <h3>{{ 'PRACTITIONERS.NORESULTS' | translate }}</h3>
+  </div>
+  <div *ngIf="error">
+    <h3>{{ 'BACKEND.TIMEOUT' | translate }}</h3>
+  </div>
+</div>
+

@@ -1,4 +1,7 @@
-<smart-header>
+<div [hidden]="!isHidden()" class="hideAll">
+    <smart-loading [ngStyle]="{'display': 'inline-block'}"></smart-loading>
+</div>
+<smart-header logoHref="#">
   <div col3>
     <smart-practitioner-name
         practitionerName="{{name}}"
@@ -6,11 +9,35 @@
         [ngStyle]="{'margin-top': '-17px', 'display': 'block', float: 'left'}">
     </smart-practitioner-name>
     <smart-navigation [ngStyle]="{'margin-top': '-8px', 'display': 'block', float: 'left'}">
-      <smart-nav-item label="{{ 'NAVIGATION.HEALTHPRO' | translate }}" imgPath="/assets/profissionais.svg" route="/app/practitioner"></smart-nav-item>
-      <!-- <smart-nav-item label="{{ 'NAVIGATION.SHIFTS' | translate }}" imgPath="/assets/escalas.svg" route=""></smart-nav-item> -->
-      <smart-nav-item label="{{ 'NAVIGATION.PATIENTS' | translate }}" imgPath="/assets/visitas.svg" route="/app/patient"></smart-nav-item>
+      <!-- <smart-nav-item
+        label="{{ 'NAVIGATION.DASHBOARD' | translate }}"
+        imgPath="./assets/profissionais.svg"
+        route="/app/dashboard"
+        *ngIf="practitionerEnable">
+      </smart-nav-item> -->
+      <smart-nav-item
+            label="{{ 'NAVIGATION.HEALTHPRO' | translate }}"
+            imgPath="./assets/profissionais.svg"
+            route="/app/practitioner"
+            *ngIf="practitionerEnable">
+      </smart-nav-item>
+      <!-- <smart-nav-item label="{{ 'NAVIGATION.SHIFTS' | translate }}" imgPath="./assets/escalas.svg" route=""></smart-nav-item> -->
+      <smart-nav-item
+            id="patient-icon"
+            label="{{ 'NAVIGATION.PATIENTS' | translate }}"
+            imgPath="./assets/pacientes.svg"
+            route="/app/patient"
+            *ngIf="patientEnable">
+      </smart-nav-item>
     </smart-navigation>
     <smart-logout label="{{ 'LOGOUT' | translate }}" [ngStyle]="{'margin-top': '-17px', 'display': 'inline-block'}"></smart-logout>
+  </div>
+  <div col4>
+    <smart-menu style="display: inline-block; margin-top: -17px;">
+      <smart-menu-item href="{{getSmartPath()}}">{{'MENU.SMART' | translate}}</smart-menu-item>
+      <smart-menu-item href="{{getCarePlanPath()}}">{{'MENU.CARE_PLAN' | translate}}</smart-menu-item>
+      <smart-menu-item [active]="true">{{'MENU.IDENTIFICATION' | translate}}</smart-menu-item>
+    </smart-menu>
   </div>
 </smart-header>
 <router-outlet></router-outlet>

@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, ViewChild, ElementRef, EventEmitter } from '@angular/core';
-import { Practitioner, PractitionerService } from 'front-end-common';
+import { Practitioner, PractitionerService, ROLES } from 'front-end-common';
 import { environment } from '../../../../environments/environment';
+import { Subject } from 'rxjs/Rx';
 
 const KEY_DOWN = 40;
 const KEY_UP = 38;
@@ -35,7 +36,11 @@ export class PractitionerChooserComponent implements OnInit {
 
   @Input() fieldTitle: string;
 
+  @Input() editable: boolean;
+
   @Output() setPractitioner = new EventEmitter<Practitioner>();
+
+  @Input() role = ROLES.MEDIC;
 
   listening: boolean;
 
@@ -47,9 +52,29 @@ export class PractitionerChooserComponent implements OnInit {
 
   suggestions: Array<Practitioner>;
 
-  timer;
+  searchDebouncer = new Subject<string>();
 
-  constructor(private pService: PractitionerService, private eRef: ElementRef) { }
+  private typeTimeout = 1000;
+
+  constructor(private pService: PractitionerService, private eRef: ElementRef) {
+    this.searchDebouncer
+      .debounceTime(this.typeTimeout)
+      .switchMap(term => this.keyPress(term))
+      .subscribe(
+        response => {
+          this.loading = false;
+          const suggestions = response['dtoList'];
+          if (suggestions != null) {
+            this.suggestions = suggestions.length > 5 ? suggestions.slice(0, 5) : suggestions;
+          } else {
+            this.suggestions = null;
+          }
+        },
+        () => {
+          this.loading = false;
+        }
+      );
+  }
 
   ngOnInit() {
     this.listening = false;
@@ -59,27 +84,11 @@ export class PractitionerChooserComponent implements OnInit {
   futureKeyPress(value: string) {
     this.selectedPractitioner = null;
     this.loading = true;
-    clearTimeout(this.timer);
-    this.timer = setTimeout(() => {
-      this.keyPress(value);
-    }, 1000);
+    this.searchDebouncer.next(value);
   }
 
   keyPress(value: string) {
-    this.pService.searchPractitioners(value.replace(/\s/g, ','), environment.his, true, 5).subscribe(
-      response => {
-        this.loading = false;
-        const suggestions = response['dtoList'];
-        if (suggestions != null) {
-          this.suggestions = suggestions.length > 5 ? suggestions.slice(0, 5) : suggestions;
-        } else {
-          this.suggestions = null;
-        }
-      },
-      () => {
-        this.loading = false;
-      }
-    );
+    return this.pService.searchPractitioners(value.replace(/\s/g, ','), environment.his, true, this.role, 5);
   }
 
   inputFocus(): void {

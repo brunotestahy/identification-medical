@@ -7,17 +7,30 @@ import { FrontEndConfig } from 'front-end-common';
 export interface Environment extends FrontEndConfig {
   production: boolean;
   roomMapping: string;
+  carePlanPath: string;
+  carePlanAppPath: string;
+  smartPath: string;
+  smartAppPath: string;
+  scheduleAppPath: string;
+  patient?: {
+    baseURL: string;
+    searchURL?: string;
+    paginationURL?: string;
+    careProviderURL?: string;
+    searchCachedURL?: string;
+    paginationCachedURL?: string;
+  };
 }
 
-const identificationServer = 'https://10.25.44.129:8459/identification';
+const identificationServer = 'https://10.25.44.133:8459/identification_server';
 
 export const environment: Environment = {
   production: false,
-  roomMapping: 'rdsl:model:map:room:buildingsector',
+  roomMapping: 'rdsl:model:map:room:buildingsector:copastar',
 
   // front-end-common configs
   his: 'source:copastar',
-  homeRoute: '/app/practitioner',
+  homeRoute: '/app/patient',
   practitioner: {
     baseURL: `${identificationServer}/api/practitioner`,
     roleURL: '/role',
@@ -27,8 +40,10 @@ export const environment: Environment = {
   patient: {
     baseURL: `${identificationServer}/api/patient`,
     searchURL: '/search',
+    careProviderURL: '/practitioner',
     paginationURL: '/paginate',
-    careProviderURL: '/practitioner'
+    searchCachedURL: '/cached/search',
+    paginationCachedURL: '/cached/paginate'
   },
   room: {
     baseURL: `${identificationServer}/api/room`,
@@ -50,5 +65,20 @@ export const environment: Environment = {
     bulkSaveURL: '/bulksave',
     loggingInterval: 15000
   },
-  thumbnail: 'http://10.25.44.132:8080/thumbnail_server/thumbnail'
+  appointment: {
+    baseURL: `${identificationServer}/api/appointment`,
+    shiftURL: '/shift'
+  },
+  rating: {
+    baseURL: `${identificationServer}/api/rating`,
+    searchURL: '/search',
+    reasonURL: '/reason',
+    paginationURL: '/paginate'
+  },
+  thumbnail: 'http://10.25.44.133:8459/thumbnail_server/thumbnail',
+  carePlanPath: 'http://www.amazon.com',
+  carePlanAppPath: 'careplan://',
+  smartPath: 'http://www.google.com',
+  smartAppPath: 'smarthosp://',
+  scheduleAppPath: 'smartschedule://'
 };

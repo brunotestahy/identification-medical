@@ -5,7 +5,7 @@
   <div class="fieldName"></div>
   <div class="editBtn"></div>
 </div>
-<div class="inputField" *ngIf="practitioner == null" [ngClass]="{'fixed': listening}">
+<div class="inputField" *ngIf="editable && practitioner == null" [ngClass]="{'fixed': listening}">
   <input type="text" (focus)="inputFocus()"
                      (input)="futureKeyPress(inputText.value)"
                      #inputText/>
@@ -27,9 +27,15 @@
   </div>
 </div>
 <div class="spaceDiv" *ngIf="practitioner == null" [ngStyle]="{'display': listening ? '' : 'none'}"></div>
-<div class="medic-display" *ngIf="practitioner != null">
+<div class="medic-display" *ngIf="editable && practitioner != null">
   <div class="medic-name" title="{{practitioner.fullName}}">
     {{practitioner.fullName}}
   </div>
   <div class="icon remove" (click)="onRemove()"></div>
+</div>
+<div class="medic-display" *ngIf="!editable">
+  <div class="medic-name" title="{{practitioner.fullName}}" *ngIf="practitioner != null">
+    {{practitioner.fullName}}
+  </div>
+  <div class="medic-name" *ngIf="practitioner == null" [ngStyle]="{'height': '41px'}"></div>
 </div>

@@ -1,0 +1,22 @@
+<table>
+  <thead>
+    <tr>
+      <th>Paciente</th>
+      <th>Profissional</th>
+      <th>Data</th>
+      <th>Nota</th>
+      <th>Comentário</th>
+      <th>Razões</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let rating of ratings">
+      <td>{{rating.patient.fullName}}</td>
+      <td>{{rating.practitioner.fullName}}</td>
+      <td>{{getDate(rating)}}</td>
+      <td>{{rating.rating}}</td>
+      <td>{{rating.comment}}</td>
+      <td>{{rating.reasons}}</td>
+    </tr>
+  </tbody>
+</table>

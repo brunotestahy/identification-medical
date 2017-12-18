@@ -1,0 +1,78 @@
+<!-- <div [hidden]="!isHidden()" class="hideAll">
+    <smart-loading [ngStyle]="{'display': 'inline-block'}"></smart-loading>
+</div> -->
+<smart-header logoHref="#">
+  <div col1>
+    <smart-greeting [patient]="patient" *ngIf="patient != null"></smart-greeting>
+  </div>
+  <div col4>
+    <img src="assets/refresh.svg"
+         style="width: 30px; margin-top: -75px; margin-right: 20px; cursor: pointer;"
+         (click)="refresh()"
+         class="refresh"
+         [ngClass]="{'active': loading}"/>
+    <smart-menu style="display: inline-block; margin-top: -17px;">
+      <smart-menu-item (click)="$event.preventDefault(); openSmartApp()">{{'MENU.SMART' | translate}}</smart-menu-item>
+      <smart-menu-item (click)="$event.preventDefault(); openCarePlanApp()">{{'MENU.CARE_PLAN' | translate}}</smart-menu-item>
+      <smart-menu-item (click)="$event.preventDefault(); openScheduleApp()">{{'MENU.SCHEDULE' | translate}}</smart-menu-item>
+      <smart-menu-item [active]="true">{{'MENU.EVALUATION' | translate}}</smart-menu-item>
+    </smart-menu>
+  </div>
+</smart-header>
+<div class="bar-divider">
+  <p class="header-greeting">{{'EVALUATION.HEADER_GREETING' | translate}}</p>
+</div>
+<smart-search-header    (updateSuggestions)="debouncedSearch($event)"
+                        placeHolder="{{ 'EVALUATION.SEARCH' | translate }}"
+                        invalidLengthMessage="{{'SEARCH.INVALID_LENGTH' | translate}}"
+                        width="70%"
+                        margin="0 20px 0 20px">
+      <div class="field-group">
+        <div class="field">
+          <div class="field-label">
+            {{ 'EVALUATION.FILTER.LABEL' | translate }}
+          </div>
+          <smart-select [(value)]="selectedRatedFilter"
+                        (change)="onRatedFilterSelect()"
+                        width="201px">
+            <smart-option display="{{ 'EVALUATION.FILTER.EVERYONE' | translate }}"></smart-option>
+            <smart-option value="evaluated" display="{{ 'EVALUATION.FILTER.EVALUATED' | translate }}"></smart-option>
+            <smart-option value="not_evaluated" display="{{ 'EVALUATION.FILTER.NOT_EVALUATED' | translate }}"></smart-option>
+          </smart-select>
+        </div>
+      </div>
+</smart-search-header>
+
+<div class="practitioners">
+  <div *ngIf="!loading">
+    <smart-practitioner-card [practitioner]="prac"
+                              *ngFor="let prac of filteredPractitioners"
+                              [roleMap]="roleMap"
+                              [selected]=isSelected(prac)>
+      <div evaluation>
+        <input *ngIf="isSelected(prac)" type="button" class="evaluation-button" value="{{ 'EVALUATION.BUTTON.REEVALUATE' | translate }}" (click)="openEvaluationForm(prac, roleMap)">
+        <input *ngIf="!isSelected(prac)" type="button" class="evaluation-button" value="{{ 'EVALUATION.BUTTON.EVALUATE' | translate }}" (click)="openEvaluationForm(prac, roleMap)">
+      </div>
+    </smart-practitioner-card>
+    <div class="last-flex-block" *ngFor="let i of [1,2,3,4,5]"></div>
+  </div>
+  <div>
+    <smart-loading *ngIf="loading || loadingMore"></smart-loading>
+  </div>
+  <div *ngIf="(filteredPractitioners == null || filteredPractitioners.length === 0) && !loading && !error">
+    <h3>{{ 'PRACTITIONERS.NORESULTS' | translate }}</h3>
+  </div>
+  <div *ngIf="error">
+    <h3>{{ 'BACKEND.TIMEOUT' | translate }}</h3>
+  </div>
+</div>
+
+<app-evaluation-form [opened]="evaluationFormOpened"
+                     [practitioner]="pracForm"
+                     [patient]="patient"
+                     [rolemap]="roleMapForm"
+                     [pastRating]="haveBeenRated[pracForm.id]"
+                     (overlayClick)="onOverlayClick()"
+                     (successSubmition)="onSuccessSubmition()"
+                     *ngIf="evaluationFormOpened">
+</app-evaluation-form>

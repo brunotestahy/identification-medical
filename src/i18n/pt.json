@@ -1,8 +1,10 @@
 {
+  "APP_TITLE": "Identificação da Equipe de Cuidados",
   "BACKEND": {
-    "TIMEOUT": "Ocorreu um erro. Por favor tente novamente mais tarde"
+    "TIMEOUT": "Ocorreu um erro. Por favor tente novamente mais tarde",
+    "ERROR": "Ocorreu um erro. Por favor tente novamente mais tarde"
   },
-  "SEARCH" : {
+  "SEARCH": {
     "INVALID_LENGTH": "Digite pelo menos 3 letras para buscar"
   },
   "LOGIN": {
@@ -18,7 +20,19 @@
     "LOADMORE": "CARREGAR MAIS PROFISSIONAIS +",
     "NORESULTS": "Nenhum resultado encontrado",
     "SEARCH": "Buscar nome do profissional",
-    "TITLE": "Profissionais de Saúde"
+    "TITLE": "Profissionais de Saúde",
+    "EDIT_PHOTO": "Editar foto",
+    "DELETE_PHOTO": "Apagar foto",
+    "DELETE_CONFIRMATION": "Tem certeza que deseja apagar a foto do profissional ",
+    "DELETE_ERROR": "Ocorreu um erro. Por favor, tente novamente",
+    "ROLE": {
+      "LABEL": "Profissional",
+      "ALL": "Todos",
+      "DOCTOR": "Médico(a)",
+      "NURSE": "Enfermeiro(a)",
+      "NURSE_TECH": "Técnico em enfermagem"
+    },
+    "EVALUATION": "Dashboard de Avaliações"
   },
   "PATIENTS": {
     "LOADMORE": "CARREGAR MAIS PACIENTES +",
@@ -35,13 +49,83 @@
     "HEALTHPRO": "PROF. SAÚDE",
     "SHIFTS": "ESCALAS",
     "PATIENTS": "PACIENTES",
-    "PROFESSIONAL": "PROFISSIONAL DE SAÚDE"
+    "PROFESSIONAL": "PROFISSIONAL DE SAÚDE",
+    "DASHBOARD": "Painel"
   },
   "CAREPROVIDER": {
     "ROOM": "Quarto",
     "YEARS": "anos",
     "ASSISTANT": "Médico Assistente",
     "ASSOCIATED": "Médico Associado",
-    "CARD_ERROR": "Ocorreu um erro. Por favor tente novamente mais tarde."
+    "CARD_ERROR": "Ocorreu um erro. Por favor tente novamente mais tarde.",
+    "NURSE": "Enfermeiro",
+    "NURSE_TECH": "Téc. Enfermagem",
+    "COPYSCHEDULE": "Copiar escala do dia ",
+    "COPYSCHEDULEBUTTON": "Copiar"
+  },
+  "PHOTO_DIALOG": {
+    "TITLE": "Editar Imagem do Profissional",
+    "SUCCESS_MESSAGE": "Profissional salvo com sucesso",
+    "THUMBNAIL_PLACEHOLDER": "Incluir imagem",
+    "CANCEL_LABEL": "cancelar",
+    "SAVE_LABEL": "cadastrar"
+  },
+  "MENU": {
+    "SMART": "Smart Hospitality",
+    "IDENTIFICATION": "Equipe de Cuidados",
+    "CARE_PLAN": "Plano de cuidados",
+    "SCHEDULE": "Agenda",
+    "EVALUATION": "Avaliação"
+  },
+  "EVALUATION": {
+    "HEADER_GREETING": "Sua avaliação é fundamental para a nossa evolução",
+    "SEARCH": "Buscar por nome",
+    "FILTER" : {
+      "LABEL": "Filtrar por tipo de avaliação",
+      "EVERYONE": "Todos",
+      "EVALUATED": "Avaliado",
+      "NOT_EVALUATED": "Não avaliado"
+    },
+    "BUTTON": {
+      "EVALUATE": "Avaliar",
+      "REEVALUATE": "Reavaliar"
+    },
+    "FORM" : {
+      "ASTERISK" : {
+        "TOP": "Sua avaliação será mantida em total sigilo. Nenhum profissional saberá como foi avaliado.",
+        "BOTTOM": "As informações fornecidas serão encaminhadas diretamente para a ouvidoria."
+      },
+      "SUBMIT_BUTTON": "ENVIAR AVALIAÇÃO",
+      "GREETING": "Olá",
+      "HEADER": "gostaríamos de saber como foi sua experiência com o nosso enfermeiro",
+      "HEADER_REEVALUATE": "você gostaria de reavaliar este funcionário? Sua avaliação anterior será descartada",
+      "WANNA_COMMENT": "Quer fazer um comentário?",
+      "EVALUATION_EXCUSE": "Por que avaliou sua experiência assim?",
+      "CHECKBOX": {
+        "TIME": "Tempo de atendimento",
+        "CLARITY": "Clareza das informações",
+        "CORDIALITY": "Cordialidade do atendimento",
+        "OTHER": "Outros"
+      },
+      "TEXTAREA": "Faça seu comentário sobre este profissional"
+    }
+  },
+  "DASHBOARD" : {
+    "FILTER" : {
+      "PERIOD": "Período",
+      "LAST_30_DAYS": "Últimos 30 dias",
+      "TODAY": "Hoje",
+      "SHIFT": "Turno",
+      "GRADE": "Nota",
+      "SEARCH_NAME": "Buscar por nome",
+      "RANGE_PREFIX": "a",
+      "UNTIL_PREFIX": "até",
+      "QUANTITY": "Qnt. Avaliações"
+    },
+    "TABLE" : {
+      "NAME": "Nome do Enfermeiro",
+      "DEPOSITIONS" : "Depoimentos",
+      "AVERAGE" : "Média Geral"
+    }
   }
 }

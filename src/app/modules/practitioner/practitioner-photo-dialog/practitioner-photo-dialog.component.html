@@ -10,13 +10,19 @@
     <div class="alert alert-danger" *ngIf="error">
       {{errorMessage}}
     </div>
+    <div class="medic-name" *ngIf="practitioner != null">
+      {{practitioner.fullName}}
+    </div>
     <div class="photo-container">
-      <smart-practitioner-photo-chooser [practitioner]="practitionerPhoto" [placeHolder]="thumbnailPlaceHolder">
+      <smart-practitioner-photo-chooser [practitioner]="practitionerPhoto"
+                                        [placeHolder]="thumbnailPlaceHolder"
+                                        (error)="onThumbnailUploadError()"
+                                        (success)="onThumnailUploadSuccess()">
       </smart-practitioner-photo-chooser>
     </div>
     <div class="button-group">
       <button class="btn" (click)="onOverlayClick()">{{cancelLabel}}</button>
-      <button class="btn btn-primary" (click)="save()">{{saveLabel}}</button>
+      <button class="btn btn-primary" (click)="save()" [disabled]="disableSave">{{saveLabel}}</button>
     </div>
   </div>
 

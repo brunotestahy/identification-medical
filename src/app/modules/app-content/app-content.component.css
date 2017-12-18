@@ -1,0 +1,13 @@
+/deep/ #patient-icon .box{
+  background-position-y:-19px !important;
+}
+
+.hideAll{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 1000;
+  text-align: center;
+  padding-top: 50px;
+}

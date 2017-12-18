@@ -1,13 +1,33 @@
+<div class="bar-divider"></div>
+
 <smart-search-header title="{{ 'PRACTITIONERS.TITLE' | translate }}"
-                     (updateSuggestions)="debouncedSearch($event)"
-                     placeHolder="{{ 'PRACTITIONERS.SEARCH' | translate }}"
-                     invalidLengthMessage="{{'SEARCH.INVALID_LENGTH' | translate}}">
+                    (updateSuggestions)="debouncedSearch($event)"
+                    placeHolder="{{ 'PRACTITIONERS.SEARCH' | translate }}"
+                    invalidLengthMessage="{{'SEARCH.INVALID_LENGTH' | translate}}">
+  <div class="field-group">
+    <div class="field">
+      <div class="field-label">
+        {{ 'PRACTITIONERS.ROLE.LABEL' | translate }}
+      </div>
+      <smart-select [(value)]="selectedRole"
+                    (change)="onRoleSelect()"
+                    *ngIf="roleMap != null"
+                    width="201px">
+        <smart-option [display]="'PRACTITIONERS.ROLE.ALL' | translate"></smart-option>
+        <smart-option [value]="code" [display]="roleMap[code]" *ngFor="let code of getRoleKeys()"></smart-option>
+      </smart-select>
+    </div>
+  </div>
 </smart-search-header>
+
 <div class="practitioners">
   <div *ngIf="!loading">
-    <smart-practitioner-card [practitioner]="prac" *ngFor="let prac of practitioners">
+    <smart-practitioner-card [practitioner]="prac"
+                             *ngFor="let prac of practitioners"
+                             [roleMap]="roleMap">
       <div actions>
-          <div class="edit icon" (click)="openPractitionerPhotoDialog(prac)"></div>
+        <div class="edit icon" title="{{'PRACTITIONERS.EDIT_PHOTO' | translate}}" (click)="openPractitionerPhotoDialog(prac)" *ngIf="photoEditEnable"></div>
+        <div class="icon remove" title="{{'PRACTITIONERS.DELETE_PHOTO' | translate}}" (click)="openDeleteDialog(prac)" *ngIf="photoEditEnable && prac.photo"></div>
       </div>
     </smart-practitioner-card>
     <div class="last-flex-block" *ngFor="let i of [1,2,3,4,5]"></div>
@@ -23,7 +43,7 @@
   </div>
 </div>
 <div class="loadMore">
-  <button class="btn" type="button" *ngIf="urlNext != null" (click)="getMorePractitioners()">
+  <button class="btn" type="button" *ngIf="urlNext != null && !(loading || loadingMore)" (click)="getMorePractitioners()">
     {{ 'PRACTITIONERS.LOADMORE' | translate }}
   </button>
 </div>
@@ -31,10 +51,27 @@
                                [practitioner]="selectedPractitioner"
                                (overlayClick)="onOverlayClick()"
                                (practitionerSaved)="onPractitionerSaved($event)"
-                               title="Editar imagem do Profissional"
-                               errorMessage="Erro ao salvar profissional"
-                               successMessage="Profissional salvo com sucesso"
-                               thumbnailPlaceHolder="Incluir imagem"
-                               cancelLabel="cancelar"
-                               saveLabel="Cadastrar">
+                               title="{{'PHOTO_DIALOG.TITLE' | translate}}"
+                               errorMessage="{{'BACKEND.ERROR' | translate}}"
+                               successMessage="{{'PHOTO_DIALOG.SUCCESS_MESSAGE' | translate}}"
+                               thumbnailPlaceHolder="{{'PHOTO_DIALOG.THUMBNAIL_PLACEHOLDER' | translate}}"
+                               cancelLabel="{{'PHOTO_DIALOG.CANCEL_LABEL' | translate}}"
+                               saveLabel="{{'PHOTO_DIALOG.SAVE_LABEL' | translate}}">
 </app-practitioner-photo-dialog>
+
+<smart-dialog [opened]="deletePhotoDialogOpened">
+  <smart-loading *ngIf="loadingDelete"></smart-loading>
+  <div *ngIf="!loadingDelete && !errorDelete">
+    <h3 *ngIf="selectedPractitioner">{{ 'PRACTITIONERS.DELETE_CONFIRMATION' | translate }} {{ selectedPractitioner.fullName }}?</h3>
+    <div class="button-group">
+      <button class="btn" type="button" (click)="closeDeleteDialog()">Não</button>
+      <button class="btn btn-primary" (click)="deletePractitionerPhoto()">Sim</button>
+    </div>
+  </div>
+  <div *ngIf="!loadingDelete && errorDelete">
+    <h3>{{ 'PRACTITIONERS.DELETE_ERROR' | translate }}</h3>
+    <div class="button-group">
+      <button class="btn btn-primary" (click)="closeDeleteDialog()">OK</button>
+    </div>
+  </div>
+</smart-dialog>

@@ -7,7 +7,6 @@ import { Practitioner, PractitionerService } from 'front-end-common';
   styleUrls: ['./practitioner-photo-dialog.component.css']
 })
 export class PractitionerPhotoDialogComponent implements OnInit {
-
   @Input() opened: boolean;
 
   @Input() title: string;
@@ -23,12 +22,14 @@ export class PractitionerPhotoDialogComponent implements OnInit {
   loading: boolean;
   success: boolean;
   error: boolean;
+  disableSave: boolean;
 
   practitionerPhoto: Practitioner;
 
   private _practitioner: Practitioner;
 
-  @Input() set practitioner(value: any) {
+  @Input()
+  set practitioner(value: any) {
     this._practitioner = value == null ? null : value as Practitioner;
     this.resetPractitioner();
   }
@@ -37,18 +38,20 @@ export class PractitionerPhotoDialogComponent implements OnInit {
     return this._practitioner;
   }
 
-  constructor(private practitionerService: PractitionerService) { }
+  constructor(private practitionerService: PractitionerService) {}
 
   ngOnInit() {
     this.resetPractitioner();
   }
 
   resetPractitioner() {
-    const photo: string = this.practitioner != null ? this.practitioner.photo : null;
+    const photo: string =
+      this.practitioner != null ? this.practitioner.photo : null;
     this.practitionerPhoto = { photo };
     this.loading = false;
     this.success = false;
     this.error = false;
+    this.disableSave = true;
   }
 
   onOverlayClick() {
@@ -62,14 +65,14 @@ export class PractitionerPhotoDialogComponent implements OnInit {
       ...this.practitionerPhoto
     };
     this.practitionerService.save(practitionerToSave).subscribe(
-      (id: string) => {
+      (practitionerSaved: Practitioner) => {
         this.success = true;
         this.error = false;
         this.loading = false;
         setTimeout(() => {
           this.success = false;
           // practitionerToSave.id = id;
-          this.practitionerSaved.emit(practitionerToSave);
+          this.practitionerSaved.emit(practitionerSaved);
         }, 3000);
       },
       () => {
@@ -79,4 +82,12 @@ export class PractitionerPhotoDialogComponent implements OnInit {
     );
   }
 
+  onThumbnailUploadError() {
+    this.error = true;
+  }
+
+  onThumnailUploadSuccess() {
+    this.error = false;
+    this.disableSave = false;
+  }
 }

@@ -1,4 +1,5 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
@@ -11,22 +12,26 @@ import { AppComponent } from './app.component';
 
 import { SharedModule } from './modules/shared/shared.module';
 
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
+
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './i18n/', '.json');
 }
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    LoginModule,
     UiLogModule,
-    RouterModule.forRoot([
+    RouterModule . forRoot([
       { path: 'app', loadChildren: './modules/app-content/app-content.module#AppContentModule' },
+      { path: 'evaluation', loadChildren: './modules/evaluation/evaluation.module#EvaluationModule' },
       { path: 'login', loadChildren: './modules/login/login.module#LoginModule'},
-      { path: '**', redirectTo: '/app/practitioner' }
+      { path: 'ratings', loadChildren: './modules/ratings/ratings.module#RatingsModule' },
+      { path: '**', redirectTo: '/app/patient' }
     ]),
     HttpClientModule,
     TranslateModule.forRoot({
@@ -36,7 +41,12 @@ export function createTranslateLoader(http: HttpClient) {
         deps: [HttpClient]
       }
     }),
-    SharedModule
+    SharedModule,
+    BrowserAnimationsModule,
+    NgbModule.forRoot()
+  ],
+  providers: [
+    Title
   ],
   bootstrap: [AppComponent]
 })
