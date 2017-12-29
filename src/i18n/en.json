@@ -93,7 +93,7 @@
     "FORM" : {
       "ASTERISK": {
         "TOP": "Your evaluation will be kept in full secrecy. No professional will know how it was evaluated",
-        "ASTERISK_BOTTOM": "The information provided will be forwarded directly to the ombudsman."
+        "ASTERISK_BOTTOM": "The provided information will be forwarded directly to the management and the ombudsman."
       },
       "SUBMIT_BUTTON": "SUBMIT EVALUATION",
       "GREETING": "Hi",

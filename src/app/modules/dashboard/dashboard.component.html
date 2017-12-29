@@ -70,48 +70,46 @@
 </smart-search-header>
 
 <div class="main">
-  <table *ngIf="!loading">
-    <tr>
-        <th>{{'DASHBOARD.TABLE.NAME' | translate}}</th>
-        <th></th>
-        <th>{{'DASHBOARD.TABLE.AVERAGE' | translate}}</th>
-        <th></th>
-        <th>{{'DASHBOARD.TABLE.DEPOSITIONS' | translate}}</th>
-    </tr>
-    <tr *ngFor="let prac of practitioners">
-      <td colspan="2" class="name">
-        <div class="inner-name">
-          <smart-practitioner-thumbnail [practitioner]="prac"></smart-practitioner-thumbnail> <span>{{prac.name}}</span>
-        </div>
-      </td>
-      <td>
-      <ng-template #t let-fill="fill">
-        <span *ngIf="fill === 100" class="star filled">&#9733;</span>
-        <span *ngIf="fill === 0" class="star">&#9733;</span>
-        <span *ngIf="fill < 100 && fill > 0" class="star">
-          <span class="half" [style.width.%]="fill">&#9733;</span>&#9733;
-        </span>
-      </ng-template>
-      <ngb-rating [(rate)]="currentRate" [starTemplate]="t" [readonly]="true" max="5"></ngb-rating>
-      </td>
-      <td></td>
-      <td class="depositions">
-        <img class="img-left" src="assets/quotation.svg" >
-          <span>{{depositions}}</span>
-          <span class="rating-depositions">
-            28/04/2014, 10:24h
-            <ngb-rating [(rate)]="currentRateDepositions" [readonly]="true">
-              <ng-template let-fill="fill">
-                <span class="star-depositions" [class.filled]="fill === 100">&#9733;</span>
-              </ng-template>
-            </ngb-rating>
+    <table *ngIf="!loading && practitioners != null && practitioners.length !== 0">
+      <tr>
+          <th>{{'DASHBOARD.TABLE.NAME' | translate}}</th>
+          <th></th>
+          <th>{{'DASHBOARD.TABLE.AVERAGE' | translate}}</th>
+          <th></th>
+          <th>{{'DASHBOARD.TABLE.DEPOSITIONS' | translate}}</th>
+      </tr>
+      <tr *ngFor="let prac of practitioners">
+        <td colspan="2" class="name">
+          <div class="inner-name">
+            <smart-practitioner-thumbnail [practitioner]="prac"></smart-practitioner-thumbnail> <span>{{prac.name}}</span>
+          </div>
+        </td>
+        <td>
+        <ng-template #t let-fill="fill">
+          <span *ngIf="fill === 100" class="star filled">&#9733;</span>
+          <span *ngIf="fill === 0" class="star">&#9733;</span>
+          <span *ngIf="fill < 100 && fill > 0" class="star">
+            <span class="half" [style.width.%]="fill">&#9733;</span>&#9733;
           </span>
-        <img class="img-right" src="assets/quotation.svg" >
-      </td>
-    </tr>
-  </table>
-
-
+        </ng-template>
+        <ngb-rating [(rate)]="currentRate" [starTemplate]="t" [readonly]="true" max="5"></ngb-rating>
+        </td>
+        <td></td>
+        <td class="depositions">
+          <img class="img-left" src="assets/quotation.svg" >
+            <span>{{depositions}}</span>
+            <span class="rating-depositions">
+              28/04/2014, 10:24h
+              <ngb-rating [(rate)]="currentRateDepositions" [readonly]="true">
+                <ng-template let-fill="fill">
+                  <span class="star-depositions" [class.filled]="fill === 100">&#9733;</span>
+                </ng-template>
+              </ngb-rating>
+            </span>
+          <img class="img-right" src="assets/quotation.svg" >
+        </td>
+      </tr>
+    </table>
   <div>
     <smart-loading *ngIf="loading || loadingMore"></smart-loading>
   </div>

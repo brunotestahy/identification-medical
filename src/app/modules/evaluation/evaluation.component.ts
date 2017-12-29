@@ -105,9 +105,17 @@ export class EvaluationComponent extends PatientChecker implements OnInit {
       if (this.selectedRatedFilter == null) {
         return true;
       } else if (this.haveBeenRated != null && this.haveBeenRated[practitioner.id] != null) {
-        const rated = this.haveBeenRated[practitioner.id].rated;
+        const rated = this.haveBeenRated[practitioner.id];
         return this.selectedRatedFilter === 'evaluated' ? rated : !rated;
       }
+    }).sort((p1: Practitioner, p2: Practitioner) => {
+      if (p1.fullName > p2.fullName) {
+        return 1;
+      }
+      if (p1.fullName < p2.fullName) {
+        return -1;
+      }
+      return 0;
     });
   }
 
@@ -141,7 +149,7 @@ export class EvaluationComponent extends PatientChecker implements OnInit {
           }
         }
       }
-      console.log(this.haveBeenRated);
+      // console.log(this.haveBeenRated);
     }
 
   }

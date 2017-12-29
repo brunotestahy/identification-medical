@@ -8,6 +8,7 @@ export interface Environment extends FrontEndConfig {
   smartPath: string;
   smartAppPath: string;
   scheduleAppPath: string;
+  schedulePath: string;
   patient?: {
     baseURL: string;
     searchURL?: string;
@@ -76,5 +77,6 @@ export const environment: Environment = {
   carePlanAppPath: 'careplan://',
   smartPath: 'https://rdhcssmarthml01.rededor.corp/smart/public/index.html',
   smartAppPath: 'smarthosp://',
-  scheduleAppPath: 'smartschedule://'
+  scheduleAppPath: 'smartschedule://',
+  schedulePath: 'https://rdhcssmarthml01.rededor.corp/schedule'
 };

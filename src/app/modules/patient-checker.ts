@@ -5,6 +5,7 @@ export abstract class PatientChecker extends UserLoader {
 
   patientReadPermission: boolean;
   practitionerReadPermission: boolean;
+  ratingsReadPermission: boolean;
 
   routerPermissions: Array<any>;
 
@@ -15,10 +16,12 @@ export abstract class PatientChecker extends UserLoader {
       if (me != null && !this.loginService.isPatient()) {
         this.practitionerReadPermission = this.loginService.hasPermission('IDENTIFICATION_PRACTITIONER', 'READ');
         this.patientReadPermission = this.loginService.hasPermission('IDENTIFICATION_PATIENT', 'READ');
+        this.ratingsReadPermission = this.loginService.hasPermission('IDENTIFICATION_RATINGS', 'READ');
 
         this.routerPermissions = [];
         this.routerPermissions.push({permission: this.practitionerReadPermission, route: '/app/practitioner'});
         this.routerPermissions.push({permission: this.patientReadPermission, route: '/app/patient'});
+        this.routerPermissions.push({permission: this.ratingsReadPermission, route: '/ratings'});
       }
     });
   }
@@ -30,7 +33,9 @@ export abstract class PatientChecker extends UserLoader {
         console.log('Patient login detected, redirecting to evaluation page');
         this.router.navigate(['/evaluation']);
       }
-    }else if (currentUrl === '/evaluation') {
+    } else if (currentUrl === '/evaluation') {
+      this.redirectToAvailableRoute();
+    } else if (!this.ratingsReadPermission && currentUrl === '/ratings') {
       this.redirectToAvailableRoute();
     } else if (!this.practitionerReadPermission && currentUrl === '/app/practitioner') {
       this.redirectToAvailableRoute();

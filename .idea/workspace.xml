@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea6aee75-2255-4cbf-8aa9-3dc915a366bf" name="Default" comment="" />
+    <list default="true" id="7f740f06-6a6c-4eb9-a628-40a2030f8f30" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" afterPath="$PROJECT_DIR$/src/app/app.module.ts" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/dist/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,43 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/app.module.ts">
+      <file leaf-file-name="evaluation.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/modules/evaluation/evaluation.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="81" lean-forward="true" selection-start-line="27" selection-start-column="81" selection-end-line="27" selection-end-column="81" />
-              <folding>
-                <element signature="e#0#58#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="patient.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/modules/patient/patient.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="46" lean-forward="true" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="patient.component.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/app/modules/patient/patient.component.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="800">
-              <caret line="59" column="2" lean-forward="true" selection-start-line="59" selection-start-column="2" selection-end-line="59" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="patient.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/modules/patient/patient.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2349">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="3247">
+              <caret line="200" column="42" lean-forward="false" selection-start-line="200" selection-start-column="42" selection-end-line="200" selection-end-column="42" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
@@ -58,31 +29,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pt.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/i18n/pt.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="4" lean-forward="false" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="shared.module.ts" pinned="false" current-in-tab="false">
+      <file leaf-file-name="shared.module.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app/modules/shared/shared.module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="24" column="3" lean-forward="false" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
+            <state relative-caret-position="323">
+              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="patient.module.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/modules/patient/patient.module.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="47" column="8" lean-forward="false" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -90,23 +51,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/app.component.ts">
+      <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/app.module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="12" column="25" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-              <folding>
-                <element signature="e#0#42#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="340">
+              <caret line="34" column="7" lean-forward="false" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="environment.prod.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/environments/environment.prod.ts">
+      <file leaf-file-name="app.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/app.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="34">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -115,16 +74,46 @@
       <file leaf-file-name="environment.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/environments/environment.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="6" column="51" lean-forward="false" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="51" />
+            <state relative-caret-position="1241">
+              <caret line="76" column="30" lean-forward="false" selection-start-line="76" selection-start-column="30" selection-end-line="76" selection-end-column="30" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
+                <marker date="1514485460520" expanded="true" signature="2547:2550" ph="{&quot;roomMapping&quot;: 'rdsl:model:map:room:buildingsector:copastar'...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="patient.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/modules/patient/patient.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="765">
+              <caret line="58" column="26" lean-forward="false" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>zip(</find>
+      <find>log</find>
+      <find>smart-me</find>
+      <find>nexus</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/app/app.module.ts" />
+      </list>
+    </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
@@ -142,10 +131,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-275" />
+    <option name="x" value="-301" />
     <option name="y" value="-1088" />
-    <option name="width" value="1364" />
-    <option name="height" value="728" />
+    <option name="width" value="1936" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -166,60 +155,58 @@
         <subPane>
           <expand>
             <path>
-              <item name="identification" type="b2602c69:ProjectViewProjectNode" />
-              <item name="identification" type="462c0819:PsiDirectoryNode" />
+              <item name="identification-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="identification-client" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="identification" type="b2602c69:ProjectViewProjectNode" />
-              <item name="identification" type="462c0819:PsiDirectoryNode" />
+              <item name="identification-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="identification-client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="identification" type="b2602c69:ProjectViewProjectNode" />
-              <item name="identification" type="462c0819:PsiDirectoryNode" />
+              <item name="identification-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="identification-client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="identification" type="b2602c69:ProjectViewProjectNode" />
-              <item name="identification" type="462c0819:PsiDirectoryNode" />
+              <item name="identification-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="identification-client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="identification" type="b2602c69:ProjectViewProjectNode" />
-              <item name="identification" type="462c0819:PsiDirectoryNode" />
+              <item name="identification-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="identification-client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
               <item name="patient" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="identification" type="b2602c69:ProjectViewProjectNode" />
-              <item name="identification" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="practitioner" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="identification" type="b2602c69:ProjectViewProjectNode" />
-              <item name="identification" type="462c0819:PsiDirectoryNode" />
+              <item name="identification-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="identification-client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
               <item name="shared" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="identification" type="b2602c69:ProjectViewProjectNode" />
-              <item name="identification" type="462c0819:PsiDirectoryNode" />
+              <item name="identification-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="identification-client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="identification-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="identification-client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="environments" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="identification" type="b2602c69:ProjectViewProjectNode" />
-              <item name="identification" type="462c0819:PsiDirectoryNode" />
+              <item name="identification-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="identification-client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="i18n" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -227,22 +214,21 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
-    <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="C:/nodejs/node" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="typescript-compiler-editor-notification" value="false" />
     <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.selected.package.tslint" value="C:\workspace\identification\node_modules\tslint" />
+    <property name="node.js.selected.package.tslint" value="C:\workspace\identification-client\node_modules\tslint" />
+    <property name="typescript-compiler-editor-notification" value="false" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -264,33 +250,44 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ea6aee75-2255-4cbf-8aa9-3dc915a366bf" name="Default" comment="" />
-      <created>1508500739197</created>
+      <changelist id="7f740f06-6a6c-4eb9-a628-40a2030f8f30" name="Default" comment="" />
+      <created>1511370732218</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1508500739197</updated>
-      <workItem from="1508500740835" duration="2262000" />
-      <workItem from="1509447521740" duration="2717000" />
+      <updated>1511370732218</updated>
+      <workItem from="1511370738090" duration="5075000" />
+      <workItem from="1511784241852" duration="1176000" />
+      <workItem from="1511790459064" duration="2189000" />
+      <workItem from="1512574039797" duration="5299000" />
+      <workItem from="1512988184407" duration="4018000" />
+      <workItem from="1513073979986" duration="214000" />
+      <workItem from="1513178299237" duration="5454000" />
+      <workItem from="1513596520382" duration="675000" />
+      <workItem from="1513679115718" duration="2232000" />
+      <workItem from="1513768841632" duration="4254000" />
+      <workItem from="1514485397636" duration="209000" />
+      <workItem from="1514575436580" duration="100000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4979000" />
+    <option name="totallyTimeSpent" value="30895000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-301" y="-1088" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Demandware" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -304,6 +301,289 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/configuration/configuration.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/configuration/configuration.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/configuration/configuration.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/appointment/appointment.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/appointment/appointment.service.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/appointment/appointment.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/appointment/appointment.service.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/appointment/appointment.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/patient/patient.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/patient/patient.service.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/patient/patient.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/patient/patient.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/patient/patient.service.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/model/address.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/model/shifts.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/model/contact.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/model/role-codes.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/model/role-codes.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/model/address.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/model/shifts.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/model/shifts.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/model/contact.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/model/contact.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/model/role-codes.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/model/address.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner/practitioner.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner/practitioner.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner/practitioner.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/services/abstract.service.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/services/abstract.service.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner-thumbnail/practitioner-thumbnail.component.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner-thumbnail/practitioner-thumbnail.module.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner-thumbnail/practitioner-thumbnail.module.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner-thumbnail/practitioner-thumbnail.component.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/header/header.component.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/header/header.component.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/header/header.module.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/header/header.module.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/test-empty/test-empty.module.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/test-empty/test-empty.directive.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/test-empty/test-empty.module.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/test-empty/test-empty.directive.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/loading/loading.component.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/loading/loading.module.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/loading/loading.component.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/loading/loading.module.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/http/front-end-http.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/http/http-interceptor.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/http/front-end-http.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/http/front-end-http.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/http/http-interceptor.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/http/http-interceptor.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/login/login.service.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/login/login.component.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/login/login.service.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/login/login.component.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/identification/identification.component.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/identification/identification.component.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/public_api.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/public_api.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/public_api.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/environments/environment.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/environments/environment.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/environments/environment.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/algorithms/algorithms.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/algorithms/algorithms.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/algorithms/letter-pair-similarity.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/algorithms/letter-pair-similarity.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/algorithms/letter-pair-similarity.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/algorithms/algorithms.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/select/select.module.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/select/select.component.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/select/select.module.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/select/select.module.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/select/select.component.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/select/select.component.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/user-loader/user-loader.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/user-loader/user-loader.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/user-loader/user-loader.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/greeting/greeting.module.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/greeting/greeting.module.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/greeting/greeting.component.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/greeting/greeting.component.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/greeting/greeting.component.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/greeting/greeting.module.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner-form/form.fields.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner-form/practitioner-form.component.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner-form/practitioner-form.component.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner-form/practitioner-form.module.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner-form/form.fields.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner-form/practitioner-form.module.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner-form/form.fields.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner-form/practitioner-form.component.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner-form/practitioner-form.module.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/rating/rating.module.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/rating/rating.module.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/rating/rating.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/rating/rating.service.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/rating/rating-reason.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/rating/rating.service.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/rating/rating-reason.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/rating/rating.module.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/rating/rating.service.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/rating/rating-reason.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/rating/rating.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/rating/rating.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/appointment/appointment.module.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/appointment/appointment.module.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/appointment/appointment.module.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/appointment/appointment.service.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner-photo-chooser/practitioner-photo-chooser.component.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner-photo-chooser/practitioner-photo-chooser.component.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner-photo-chooser/practitioner-photo-chooser.module.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner-photo-chooser/thumbnail.service.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner-photo-chooser/practitioner-photo-chooser.component.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner-photo-chooser/practitioner-photo-chooser.module.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner-photo-chooser/thumbnail.service.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner-photo-chooser/practitioner-photo-chooser.module.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner-photo-chooser/thumbnail.service.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/login/login.module.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/login/login.component.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/login/login.module.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/login/login.module.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/login/login.service.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/ui-log/log.service.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/ui-log/log.service.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/ui-log/ui-log.component.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/ui-log/ui-log.module.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/ui-log/ui-log.module.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/ui-log/ui-log.component.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/ui-log/ui-log.component.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/ui-log/log.service.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/ui-log/ui-log.module.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/scheduler/scheduler.module.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/scheduler/scheduler.module.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/scheduler/scheduler.module.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/scheduler/scheduler.component.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/scheduler/scheduler.component.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/scheduler/scheduler.component.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/dialog/dialog.component.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/dialog/dialog.component.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/dialog/dialog.module.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/dialog/dialog.module.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/dialog/dialog.module.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/dialog/dialog.component.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/save-changes-button/save-changes-button.component.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/save-changes-button/save-changes-button.module.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/save-changes-button/save-changes-button.component.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/save-changes-button/save-changes-button.module.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/save-changes-button/save-changes-button.component.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/save-changes-button/save-changes-button.module.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/navigation/navigation.module.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/navigation/navigation.component.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/navigation/navigation.module.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/navigation/navigation.component.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/navigation/navigation.component.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/navigation/navigation.module.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/identification/identification.module.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/identification/identification.module.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/identification/identification.module.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/identification/identification.component.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/patient/patient.module.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/patient/patient.module.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/patient/patient.module.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/patient/patient.service.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/cpf/cpf.pipe.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/cpf/cpf.module.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/cpf/cpf.pipe.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/cpf/cpf.module.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/cpf/cpf.pipe.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/cpf/cpf.module.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/model/enum-event-category.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/model/model.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/model/model.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/model/ufs.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/model/enum-event-category.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/model/ufs.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/model/model.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/model/enum-event-category.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/model/ufs.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/regional-council/regional-council.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/regional-council/regional-council.module.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/regional-council/regional-council.module.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/regional-council/regional-council.service.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/regional-council/regional-council.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/regional-council/regional-council.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/regional-council/regional-council.service.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/regional-council/regional-council.module.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/regional-council/regional-council.service.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/test-empty/test-empty.module.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/test-empty/test-empty.directive.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/rules-calendar/rules-calendar.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/rules-calendar/rules-calendar.component.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/rules-calendar/rules-calendar.service.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/rules-calendar/rules-calendar.component.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/rules-calendar/rules-calendar.component.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/rules-calendar/rules-calendar.module.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/rules-calendar/rules-calendar.module.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/rules-calendar/rules-calendar.service.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/rules-calendar/rules-calendar.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/rules-calendar/rules-calendar.module.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/rules-calendar/rules-calendar.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/rules-calendar/rules-calendar.service.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/conceptmap/conceptmap.module.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/conceptmap/conceptmap.service.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/conceptmap/conceptmap.module.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/conceptmap/conceptmap.module.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/conceptmap/conceptmap.service.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/conceptmap/conceptmap.service.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/evaluation-reminder/evaluation-reminder.component.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/evaluation-reminder/evaluation-reminder.component.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/evaluation-reminder/evaluation-reminder.module.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/evaluation-reminder/evaluation-reminder.module.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/evaluation-reminder/evaluation-reminder.module.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/evaluation-reminder/evaluation-reminder.component.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner/practitioner.service.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner/practitioner-role.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner/practitioner-role.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner/practitioner.module.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner/practitioner.service.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner/practitioner.service.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner/practitioner-role.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner/practitioner.module.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner/practitioner.module.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/services/abstract.service.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/loading/loading.module.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/loading/loading.component.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/menu/menu.module.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/menu/menu.component.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/menu/menu.module.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/menu/menu.component.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/menu/menu.component.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/menu/menu.module.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/room/room.module.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/room/room.module.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/room/room.service.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/room/room.service.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/room/room.module.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/room/room.service.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner-thumbnail/practitioner-thumbnail.component.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner-thumbnail/practitioner-thumbnail.module.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/header/header.component.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/header/header.module.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner-card/practitioner-card.module.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner-card/practitioner-card.module.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner-card/practitioner-card.component.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner-card/practitioner-card.module.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner-card/practitioner-card.component.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner-card/practitioner-card.component.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner-name/practitioner-name.component.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner-name/practitioner-name.module.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner-name/practitioner-name.module.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner-name/practitioner-name.component.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner-name/practitioner-name.module.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/practitioner-name/practitioner-name.component.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/card/card.module.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/card/card.component.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/card/card.component.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/card/card.module.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/card/card.module.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/card/card.component.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/search-header/search-header.module.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/search-header/search-header.component.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/search-header/search-header.component.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/search-header/search-header.module.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/search-header/search-header.component.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/search-header/search-header.module.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/menu/menu-item/menu-item.component.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/menu/menu-item/menu-item.component.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/menu/menu-item/menu-item.component.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/login/logout/logout.component.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/login/logout/logout.component.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/login/logout/logout.component.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/select/option/option.component.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/select/option/option.component.js.map" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/select/option/option.component.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/navigation/nav-item/nav-item.component.d.ts" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/navigation/nav-item/nav-item.component.js" />
+        <option value="$PROJECT_DIR$/../front_end_common/.ng_build/ts/src/app/modules/navigation/nav-item/nav-item.component.js.map" />
+      </list>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -313,148 +593,360 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app/app.module.ts">
+    <entry file="file://$PROJECT_DIR$/src/app/modules/patient-checker.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/app-content/app-content.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="4" lean-forward="false" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/modules/shared/shared.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="24" column="3" lean-forward="false" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/app.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="25" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/environments/environment.prod.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/environments/environment.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="6" column="51" lean-forward="false" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="51" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/environments/environment.prod.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/environments/environment.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="6" column="51" lean-forward="false" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="51" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/app.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="25" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/modules/shared/shared.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="24" column="3" lean-forward="false" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="4" lean-forward="false" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/app.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="81" lean-forward="true" selection-start-line="27" selection-start-column="81" selection-end-line="27" selection-end-column="81" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="306">
+          <caret line="29" column="21" lean-forward="false" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/login/login.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/app-content/app-content.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="13" column="23" lean-forward="false" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/shared/shared.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/login/login.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/login/login.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="4" lean-forward="false" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/app-content/app-content.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="52" lean-forward="false" selection-start-line="3" selection-start-column="52" selection-end-line="3" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/patient-checker.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="2" lean-forward="false" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/app-content/app-content.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/login/login.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/app-content/app-content.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/login/login.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/login/login.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/shared/shared.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/app-content/app-content.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/patient-checker.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="2" lean-forward="false" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/app-content/app-content.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/login/login.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/app-content/app-content.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/login/login.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/login/login.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/login/login.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/practitioner/practitioner.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/profissionais.svg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/practitioner/practitioner.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/app-content/app-content.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/i18n/pt.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="48" column="31" lean-forward="false" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/patient-checker.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="3" column="22" lean-forward="false" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/login/login.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/modules/patient/patient.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2349">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="765">
+          <caret line="58" column="26" lean-forward="false" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/i18n/pt.json">
+    <entry file="file://$PROJECT_DIR$/src/environments/environment.prod.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/environments/environment.hmg.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/modules/login/login.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/practitioner/practitioner.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/evaluation/evaluation.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="17" lean-forward="false" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/app-content/app-content.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="91" lean-forward="false" selection-start-line="36" selection-start-column="91" selection-end-line="36" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.angular-cli.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="22" lean-forward="false" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/environments/environment.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1241">
+          <caret line="76" column="30" lean-forward="false" selection-start-line="76" selection-start-column="30" selection-end-line="76" selection-end-column="30" />
+          <folding>
+            <marker date="1514485460520" expanded="true" signature="2547:2550" ph="{&quot;roomMapping&quot;: 'rdsl:model:map:room:buildingsector:copastar'...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="43" column="29" lean-forward="false" selection-start-line="43" selection-start-column="29" selection-end-line="43" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/evaluation/evaluation.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3247">
+          <caret line="200" column="42" lean-forward="false" selection-start-line="200" selection-start-column="42" selection-end-line="200" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/app-content/app-content.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="29" column="30" lean-forward="false" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/patient/patient.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="47" column="8" lean-forward="false" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="34" column="7" lean-forward="false" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/modules/patient/patient.component.html">
+    <entry file="file://$PROJECT_DIR$/src/app/modules/shared/shared.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="19" column="46" lean-forward="true" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/modules/patient/patient.component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="59" column="2" lean-forward="true" selection-start-line="59" selection-start-column="2" selection-end-line="59" selection-end-column="17" />
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>

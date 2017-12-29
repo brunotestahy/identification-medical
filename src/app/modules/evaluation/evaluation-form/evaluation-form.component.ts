@@ -22,6 +22,10 @@ export class EvaluationFormComponent implements OnInit {
 
   private _patient: Patient;
 
+  error: boolean;
+
+  loading: boolean;
+
   @Input()
   set practitioner(value: any) {
     this._practitioner = value as Practitioner;
@@ -63,6 +67,8 @@ export class EvaluationFormComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.loading = true;
+    this.error = false;
     this.goodCommentTextAreaOpen = false;
     this.ratingForm = this.fb.group({
       'rating':  ['', [Validators.required, Validators.minLength(1)]],
@@ -73,12 +79,17 @@ export class EvaluationFormComponent implements OnInit {
     this.reasonFormArray = <FormArray>this.ratingForm.controls.reasonsCombo;
     this.ratingService.getReasons().subscribe(
       (success) => {
+        this.loading = false;
         this.reasons = success;
       },
       (error) => {
-        console.log(error);
+        this.loading = false;
+        this.error = true;
+        setTimeout(() => {
+          this.error = false;
+        }, 4000);
       });
-      console.log(this.pastRating);
+      // console.log(this.pastRating);
       this.firstName = this.capitalizeFirstLetter(this.patient.givenName[0]);
   }
 
@@ -92,7 +103,10 @@ export class EvaluationFormComponent implements OnInit {
 
   onSubmit(ratingForm: FormGroup) {
     // forms value
-    console.log(ratingForm);
+    // console.log(ratingForm);
+
+    this.loading = true;
+
     this.rating = {
       rating: ratingForm.value.rating,
       comment: ratingForm.controls.comment.value,
@@ -103,20 +117,27 @@ export class EvaluationFormComponent implements OnInit {
       date: {dateTime: moment(new Date()).format('YYYY-MM-DDTHH:mm:ssZ')}
     };
 
-    console.log(this.rating);
+    // console.log(this.rating);
 
     this.ratingService.save(this.rating)
       .subscribe( (success) => {
-        console.log(success);
+        this.loading = false;
+        // console.log(success);
         this.successSubmition.emit(true);
         this.onOverlayClick();
       }, (error) => {
-        console.log(error);
+        this.loading = false;
+        this.error = true;
+        setTimeout(() => {
+          this.error = false;
+        }, 4000);
       });
   }
 
   onOverlayClick() {
-    this.overlayClick.emit();
+    if (!this.loading) {
+      this.overlayClick.emit();
+    }
   }
 
   doTextareaValueChange(ev) {
@@ -124,7 +145,10 @@ export class EvaluationFormComponent implements OnInit {
       this.messageTextArea = ev.target.value;
       this.ratingForm.controls.comment = new FormControl(this.messageTextArea);
     } catch (e) {
-      console.log('could not set textarea-value');
+      this.error = true;
+      setTimeout(() => {
+        this.error = false;
+      }, 4000);
     }
   }
 
@@ -143,6 +167,6 @@ export class EvaluationFormComponent implements OnInit {
       const index = this.reasonFormArray.controls.findIndex(x => x.value === reason);
       this.reasonFormArray.removeAt(index);
     }
-    console.log(this.reasonFormArray);
+    // console.log(this.reasonFormArray);
   }
 }

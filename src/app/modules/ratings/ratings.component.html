@@ -13,10 +13,14 @@
     <tr *ngFor="let rating of ratings">
       <td>{{rating.patient.fullName}}</td>
       <td>{{rating.practitioner.fullName}}</td>
-      <td>{{getDate(rating)}}</td>
+      <td>{{rating.date}}</td>
       <td>{{rating.rating}}</td>
       <td>{{rating.comment}}</td>
       <td>{{rating.reasons}}</td>
     </tr>
   </tbody>
 </table>
+
+<div>
+  <smart-loading *ngIf="loading"></smart-loading>
+</div>

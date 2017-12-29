@@ -7,6 +7,7 @@ const KEY_DOWN = 40;
 const KEY_UP = 38;
 const KEY_ENTER = 13;
 const KEY_ESC = 27;
+const KEY_TAB = 9;
 
 const HIGHLIGHT = 'highlight';
 
@@ -19,7 +20,7 @@ export class PractitionerChooserComponent implements OnInit {
 
   @ViewChild('suggestionBox') sb: ElementRef;
   @ViewChild('suggestionList') sl: ElementRef;
-  @ViewChild('inputText') inputElement: ElementRef;
+  @ViewChild('pChooserInputText') inputElement: ElementRef;
 
   @Output() remove = new EventEmitter<Practitioner>();
 
@@ -109,14 +110,16 @@ export class PractitionerChooserComponent implements OnInit {
       suggestionElement.style.display = 'none';
       window.removeEventListener('click', closeSuggestionBox);
       window.removeEventListener('keydown', verifyKey);
-      if (this.selectedSuggestion !== -1) {
+      if (this.selectedSuggestion !== -1 && this.sl != null) {
         const highlighted = (this.sl.nativeElement as HTMLUListElement).querySelector('li.highlight');
         if (highlighted != null) {
           highlighted.classList.remove('highlight');
         }
       }
       this.listening = false;
-      (this.inputElement.nativeElement as HTMLInputElement).blur();
+      if (this.inputElement != null) {
+        (this.inputElement.nativeElement as HTMLInputElement).blur();
+      }
     };
 
     const closeSuggestionBox = (event: Event) => {
@@ -133,6 +136,7 @@ export class PractitionerChooserComponent implements OnInit {
         case KEY_UP: this.highlightElement(this.selectedSuggestion - 1); break;
         case KEY_ENTER: this.selectElement(); unregisterEventsNClose(); break;
         case KEY_ESC: unregisterEventsNClose(); break;
+        case KEY_TAB: unregisterEventsNClose(); break;
         default: if (this.selectedSuggestion !== -1) {
           const listItem = (this.sl.nativeElement as HTMLUListElement).querySelector('li.highlight').classList.remove('highlight');
           this.selectedSuggestion = - 1;
@@ -150,6 +154,8 @@ export class PractitionerChooserComponent implements OnInit {
     if (listItems.length !== 0 && this.selectedSuggestion !== -1) {
       input.value = listItems[this.selectedSuggestion].innerHTML.trim();
       this.selectedPractitioner = this.suggestions[this.selectedSuggestion];
+      // Removing the ok button. Now clicking on a practitioner name will call the selection callback.
+      this.onSetPractitioner();
     }
   }
 

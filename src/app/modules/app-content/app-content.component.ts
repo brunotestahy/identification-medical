@@ -45,6 +45,10 @@ export class AppContentComponent extends PatientChecker {
     return (environment as Environment).smartPath;
   }
 
+  getSchedulePath() {
+    return (environment as Environment).schedulePath;
+  }
+
   isHidden() {
     return this.type == null || this.type === 'patient';
   }

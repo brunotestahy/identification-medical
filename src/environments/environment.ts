@@ -12,6 +12,7 @@ export interface Environment extends FrontEndConfig {
   smartPath: string;
   smartAppPath: string;
   scheduleAppPath: string;
+  schedulePath: string;
   patient?: {
     baseURL: string;
     searchURL?: string;
@@ -22,7 +23,7 @@ export interface Environment extends FrontEndConfig {
   };
 }
 
-const identificationServer = 'https://10.25.44.133:8459/identification_server';
+const identificationServer = 'https://rdhcssmarthml01.rededor.corp/identification_server';
 
 export const environment: Environment = {
   production: false,
@@ -80,5 +81,6 @@ export const environment: Environment = {
   carePlanAppPath: 'careplan://',
   smartPath: 'http://www.google.com',
   smartAppPath: 'smarthosp://',
-  scheduleAppPath: 'smartschedule://'
+  scheduleAppPath: 'smartschedule://',
+  schedulePath: 'http://localhost:4200'
 };

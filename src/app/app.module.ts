@@ -12,7 +12,7 @@ import { AppComponent } from './app.component';
 
 import { SharedModule } from './modules/shared/shared.module';
 
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 export function createTranslateLoader(http: HttpClient) {
@@ -26,12 +26,12 @@ export function createTranslateLoader(http: HttpClient) {
   imports: [
     BrowserModule,
     UiLogModule,
-    RouterModule . forRoot([
-      { path: 'app', loadChildren: './modules/app-content/app-content.module#AppContentModule' },
-      { path: 'evaluation', loadChildren: './modules/evaluation/evaluation.module#EvaluationModule' },
-      { path: 'login', loadChildren: './modules/login/login.module#LoginModule'},
-      { path: 'ratings', loadChildren: './modules/ratings/ratings.module#RatingsModule' },
-      { path: '**', redirectTo: '/app/patient' }
+    RouterModule.forRoot([
+      {path: 'app', loadChildren: './modules/app-content/app-content.module#AppContentModule'},
+      {path: 'evaluation', loadChildren: './modules/evaluation/evaluation.module#EvaluationModule'},
+      {path: 'login', loadChildren: './modules/login/login.module#LoginModule'},
+      {path: 'ratings', loadChildren: './modules/ratings/ratings.module#RatingsModule'},
+      {path: '**', redirectTo: '/app/patient'}
     ]),
     HttpClientModule,
     TranslateModule.forRoot({
@@ -50,4 +50,5 @@ export function createTranslateLoader(http: HttpClient) {
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

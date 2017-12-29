@@ -93,7 +93,7 @@
     "FORM" : {
       "ASTERISK" : {
         "TOP": "Sua avaliação será mantida em total sigilo. Nenhum profissional saberá como foi avaliado.",
-        "BOTTOM": "As informações fornecidas serão encaminhadas diretamente para a ouvidoria."
+        "BOTTOM": "As informações fornecidas serão encaminhadas diretamente para a gerência e ouvidoria."
       },
       "SUBMIT_BUTTON": "ENVIAR AVALIAÇÃO",
       "GREETING": "Olá",

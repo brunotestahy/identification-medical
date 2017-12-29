@@ -7,8 +7,8 @@
 </div>
 <div class="inputField" *ngIf="editable && practitioner == null" [ngClass]="{'fixed': listening}">
   <input type="text" (focus)="inputFocus()"
-                     (input)="futureKeyPress(inputText.value)"
-                     #inputText/>
+                     (input)="futureKeyPress(pChooserInputText.value)"
+                     #pChooserInputText/>
   <div class="suggestion-box" #suggestionBox>
     <ul #suggestionList>
       <li *ngFor="let item of suggestions; let i = index"
@@ -18,10 +18,10 @@
       </li>
     </ul>
   </div>
-  <button class="okBtn"
+  <!--button class="okBtn"
           (click)="onSetPractitioner()"
           [disabled]="selectedPractitioner == null"
-          *ngIf="!loading || !listening">OK</button>
+          *ngIf="!loading || !listening">OK</button-->
   <div class="loading-wrapper">
     <smart-loading *ngIf="loading && listening" loader="ball-beat" loaderClass="small-loading"></smart-loading>
   </div>

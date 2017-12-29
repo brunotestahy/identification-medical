@@ -7,7 +7,7 @@ import { Observable } from 'rxjs/Rx';
 export class PatientCachedService extends PatientService {
 
     private searchCachedURL: string;
-    
+
     private paginationCachedURL: string;
 
     constructor(protected http: Http, @Inject(FrontEndConfigProvider) config) {
@@ -21,7 +21,7 @@ export class PatientCachedService extends PatientService {
         options.params = new URLSearchParams();
         options.params.set('names', names);
         options.params.set('room', room);
-        options.params.set('his', this.his);
+        options.params.set('system', this.his);
         options.params.set('admitted', String(admitted));
         if (count) {
             options.params.set('count', String(count));

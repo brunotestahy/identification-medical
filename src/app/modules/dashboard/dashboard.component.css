@@ -124,6 +124,7 @@
 table {
   text-align: center;
   margin: 10px 10px 0px 10px;
+  table-layout:fixed;
 }
 
 table th:nth-child(1) {
@@ -140,7 +141,8 @@ table th:nth-child(3) {
 }
 
 table th:nth-child(5) {
-  width: 500px;
+  width: 600px;
+
 }
 
 table th:nth-child(even) {
@@ -169,6 +171,8 @@ td {
   color: #a19893;
   font-family: 'skolasanslight';
   font-size: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .depositions span {
@@ -197,6 +201,8 @@ td {
 .name {
   font-family: 'skolasansblack';
   font-size: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .inner-name {
@@ -288,6 +294,8 @@ table tr td:nth-child(4) {
 
 .main {
   text-align: center;
+  justify-content: center;
+  display: flex;
 }
 
 :host /deep/ .loading-container {
@@ -312,4 +320,8 @@ table tr td:nth-child(4) {
   position: absolute;
   left: 135px;
   top: 24px;
+}
+
+:host /deep/ .row {
+  margin: 0px !important;
 }
